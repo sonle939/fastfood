@@ -53,34 +53,40 @@ const light4 = require("../assets/funiture/light/light4.png");
 const light5 = require("../assets/funiture/light/light5.png");
 const light6 = require("../assets/funiture/light/light6.png");
 
+//customer
+
+const son = require("../assets/funiture/customer/son.jpg");
+const son1 = require("../assets/funiture/customer/son1.jpg");
+const son2 = require("../assets/funiture/customer/son2.jpg");
+
 const funiture = [
     {
         id: 1,
         title: "Chair name1",
-        description: "",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
         image: chair1,
         price: 2500,
         amount: 30,
@@ -90,162 +96,162 @@ const funiture = [
     {
         id: 2,
         title: "Chair name2",
-        description: "",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
         image: chair2,
-        price: "",
-        amount: "",
-        rating: rating4,
-        category: ""
+        price: 1850,
+        amount: 80,
+        rating: rating3,
+        category: "chair"
     },
     {
         id: 3,
         title: "Chair name3",
-        description: "",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
         image: chair3,
         price: 1500,
         amount: 50,
-        rating: rating4,
+        rating: rating5,
         category: "chair"
     },
     {
         id: 4,
         title: "Chair name4",
-        description: "",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: chair4,
+        price: 4000,
+        amount: 40,
         rating: rating4,
-        category: ""
+        category: "chair"
     },
     {
         id: 5,
-        title: "",
-        description: "",
+        title: "Chair name5",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
-        rating: rating4,
-        category: ""
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: chair5,
+        price: 5200,
+        amount: 12,
+        rating: rating5,
+        category: "chair"
     },
     {
         id: 6,
-        title: "",
-        description: "",
+        title: "Chair name6",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
         image: chair6,
         price: 2800,
         amount: 35,
@@ -255,30 +261,30 @@ const funiture = [
     {
         id: 7,
         title: "Chair name7",
-        description: "",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
         image: chair7,
         price: 3000,
         amount: 15,
@@ -287,926 +293,935 @@ const funiture = [
     },
     {
         id: 8,
-        title: "",
-        description: "",
+        title: "Clock name",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: clock,
+        price: 2300,
+        amount: 55,
         rating: rating4,
-        category: ""
+        category: "clock"
     },
     {
         id: 9,
-        title: "",
-        description: "",
+        title: "Clock name1",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: clock1,
+        price: 1500,
+        amount: 16,
         rating: rating4,
-        category: ""
+        category: "clock"
     },
     {
         id: 10,
-        title: "",
-        description: "",
+        title: "Clock name2",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
-        rating: rating4,
-        category: ""
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: clock2,
+        price: 2900,
+        amount: 50,
+        rating: rating3,
+        category: "clock"
     },
     {
         id: 11,
-        title: "",
-        description: "",
+        title: "Clock name3",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: clock3,
+        price: 3500,
+        amount: 39,
         rating: rating4,
-        category: ""
+        category: "clock"
     },
     {
         id: 12,
-        title: "",
-        description: "",
+        title: "Clock name4",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: clock4,
+        price: 3460,
+        amount: 46,
         rating: rating4,
-        category: ""
+        category: "clock"
     },
     {
         id: 13,
-        title: "",
-        description: "",
+        title: "Clock name5",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: clock5,
+        price: 5678,
+        amount: 78,
         rating: rating4,
-        category: ""
+        category: "clock"
     },
     {
         id: 14,
-        title: "",
-        description: "",
+        title: "Clock name6",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: clock5,
+        price: 6500,
+        amount: 55,
         rating: rating4,
-        category: ""
+        category: "clock"
     },
     {
         id: 15,
-        title: "",
-        description: "",
+        title: "Mirror name",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: mirorr,
+        price: 5000,
+        amount: 24,
         rating: rating4,
-        category: ""
+        category: "mirror"
     },
     {
         id: 16,
-        title: "",
-        description: "",
+        title: "Mirror name1",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
-        rating: rating4,
-        category: ""
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: mirorr1,
+        price: 4200,
+        amount: 42,
+        rating: rating3,
+        category: "mirror"
     },
     {
         id: 17,
-        title: "",
-        description: "",
+        title: "Mirror name2",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
-        rating: rating4,
-        category: ""
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: mirorr2,
+        price: 5100,
+        amount: 15,
+        rating: rating5,
+        category: "mirror"
     },
     {
         id: 18,
-        title: "",
-        description: "",
+        title: "Mirror name3",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: mirorr3,
+        price: 4561,
+        amount: 19,
         rating: rating4,
-        category: ""
+        category: "mirror"
     },
     {
         id: 19,
-        title: "",
-        description: "",
+        title: "Mirror name4",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: mirorr4,
+        price: 6500,
+        amount: 56,
         rating: rating4,
-        category: ""
+        category: "mirror"
     },
     {
         id: 20,
-        title: "",
-        description: "",
+        title: "Mirror name5",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: mirorr5,
+        price: 7500,
+        amount: 70,
         rating: rating4,
-        category: ""
+        category: "mirror"
     },
     {
         id: 21,
-        title: "",
-        description: "",
+        title: "Mirror name6",
+        description: "Take a closer look. From the striking details to the graceful sweeps of its curves, the Imola armchair is a true design icon. Roomy enough for you to curl up in, yet so elegant it doesn’t seem over the top, the Imola armchair is an instant classic and ready to make a statement in your home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: mirorr6,
+        price: 5600,
+        amount: 23,
         rating: rating4,
-        category: ""
+        category: "mirror"
     },
     {
         id: 22,
-        title: "",
-        description: "",
+        title: "Table name",
+        description: "Lounge like you’re at a trendy club in the stylish Veneto armchair. Looking low and lovely this club-inspired armchair is just the thing for entertaining friends. The organic, unbroken lines of the design provide a casual cool look while bringing a dynamic atmosphere to you home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: table,
+        price: 2300,
+        amount: 25,
         rating: rating4,
-        category: ""
+        category: "table"
     },
     {
         id: 23,
-        title: "",
-        description: "",
+        title: "Table name1",
+        description: "Lounge like you’re at a trendy club in the stylish Veneto armchair. Looking low and lovely this club-inspired armchair is just the thing for entertaining friends. The organic, unbroken lines of the design provide a casual cool look while bringing a dynamic atmosphere to you home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: table1,
+        price: 3200,
+        amount: 29,
         rating: rating4,
-        category: ""
+        category: "table"
     },
     {
         id: 24,
-        title: "",
-        description: "",
+        title: "Table name2",
+        description: "Lounge like you’re at a trendy club in the stylish Veneto armchair. Looking low and lovely this club-inspired armchair is just the thing for entertaining friends. The organic, unbroken lines of the design provide a casual cool look while bringing a dynamic atmosphere to you home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: table2,
+        price: 7990,
+        amount: 36,
         rating: rating4,
-        category: ""
+        category: "table"
     },
     {
         id: 25,
-        title: "",
-        description: "",
+        title: "Table name3",
+        description: "Lounge like you’re at a trendy club in the stylish Veneto armchair. Looking low and lovely this club-inspired armchair is just the thing for entertaining friends. The organic, unbroken lines of the design provide a casual cool look while bringing a dynamic atmosphere to you home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: table3,
+        price: 3456,
+        amount: 65,
         rating: rating4,
-        category: ""
+        category: "table"
     },
     {
         id: 26,
-        title: "",
-        description: "",
+        title: "Table name4",
+        description: "Lounge like you’re at a trendy club in the stylish Veneto armchair. Looking low and lovely this club-inspired armchair is just the thing for entertaining friends. The organic, unbroken lines of the design provide a casual cool look while bringing a dynamic atmosphere to you home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: table4,
+        price: 4210,
+        amount: 16,
         rating: rating4,
-        category: ""
+        category: "table"
     },
     {
         id: 27,
-        title: "",
-        description: "",
+        title: "Table name5",
+        description: "Lounge like you’re at a trendy club in the stylish Veneto armchair. Looking low and lovely this club-inspired armchair is just the thing for entertaining friends. The organic, unbroken lines of the design provide a casual cool look while bringing a dynamic atmosphere to you home. Fitted with a swivel base that turns this chair so seamlessly, you’ll want to take it for a spin.",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: table5,
+        price: 5321,
+        amount: 52,
         rating: rating4,
-        category: ""
+        category: "table"
     },
     {
         id: 28,
-        title: "",
-        description: "",
+        title: "Table name6",
+        description: "Feel the warm embrace of the Charlotte armchair. Charlotte’s comfort, durability and beautiful design allow it to easily finds its place in any room. With an eye to natural forms, clean lines and comfort, designer Henrik Pedersen has created a small armchair with a big personality",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: table6,
+        price: 6210,
+        amount: 62,
         rating: rating4,
         category: ""
     },
     {
         id: 29,
-        title: "",
-        description: "",
+        title: "Lamp name1",
+        description: "Feel the warm embrace of the Charlotte armchair. Charlotte’s comfort, durability and beautiful design allow it to easily finds its place in any room. With an eye to natural forms, clean lines and comfort, designer Henrik Pedersen has created a small armchair with a big personality",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
-        rating: rating4,
-        category: ""
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: light,
+        price: 2550,
+        amount: 50,
+        rating: rating3,
+        category: "lamp"
     },
     {
         id: 30,
-        title: "",
-        description: "",
+        title: "Lamp name2",
+        description: "Feel the warm embrace of the Charlotte armchair. Charlotte’s comfort, durability and beautiful design allow it to easily finds its place in any room. With an eye to natural forms, clean lines and comfort, designer Henrik Pedersen has created a small armchair with a big personality",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: light1,
+        price: 3434,
+        amount: 43,
         rating: rating4,
-        category: ""
+        category: "lamp"
     },
     {
         id: 31,
-        title: "",
-        description: "",
+        title: "Lamp name3",
+        description: "Feel the warm embrace of the Charlotte armchair. Charlotte’s comfort, durability and beautiful design allow it to easily finds its place in any room. With an eye to natural forms, clean lines and comfort, designer Henrik Pedersen has created a small armchair with a big personality",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: light2,
+        price: 8200,
+        amount: 100,
         rating: rating4,
-        category: ""
+        category: "lamp"
     },
     {
         id: 32,
-        title: "",
-        description: "",
+        title: "Lamp name4",
+        description: "Feel the warm embrace of the Charlotte armchair. Charlotte’s comfort, durability and beautiful design allow it to easily finds its place in any room. With an eye to natural forms, clean lines and comfort, designer Henrik Pedersen has created a small armchair with a big personality",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: light3,
+        price: 5400,
+        amount: 34,
         rating: rating4,
-        category: ""
+        category: "lamp"
     },
     {
         id: 33,
-        title: "",
-        description: "",
+        title: "Lamp name5",
+        description: "Feel the warm embrace of the Charlotte armchair. Charlotte’s comfort, durability and beautiful design allow it to easily finds its place in any room. With an eye to natural forms, clean lines and comfort, designer Henrik Pedersen has created a small armchair with a big personality",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
-        rating: rating4,
-        category: ""
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: light4,
+        price: 2654,
+        amount: 19,
+        rating: rating5,
+        category: "lamp"
     },
     {
         id: 34,
-        title: "",
-        description: "",
+        title: "Lamp name6",
+        description: "Feel the warm embrace of the Charlotte armchair. Charlotte’s comfort, durability and beautiful design allow it to easily finds its place in any room. With an eye to natural forms, clean lines and comfort, designer Henrik Pedersen has created a small armchair with a big personality",
         customerreview: [
-           {
-            id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-           {
-            id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
-           },
-        ],
-        image: "",
-        price: "",
-        amount: "",
-        rating: rating4,
-        category: ""
+            {
+             id: 1,
+             fullname: "Le Xuan Son",
+             imagecus: son,
+             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+             review: rating5
+            },
+            {
+             id: 2,
+             fullname: "Le Xuan Son1",
+             imagecus: son1,
+             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
+             review: rating4
+            },
+            {
+             id: 3,
+             fullname: "Le Xuan Son2",
+             imagecus: son2,
+             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+             review: rating3
+            },
+         ],
+        image: light5,
+        price: 7800,
+        amount: 56,
+        rating: rating3,
+        category: "lamp"
     },
     {
         id: 35,
-        title: "",
-        description: "",
+        title: "Lamp name7",
+        description: "Feel the warm embrace of the Charlotte armchair. Charlotte’s comfort, durability and beautiful design allow it to easily finds its place in any room. With an eye to natural forms, clean lines and comfort, designer Henrik Pedersen has created a small armchair with a big personality",
         customerreview: [
            {
             id: 1,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
+            fullname: "Le Xuan Son",
+            imagecus: son,
+            text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
+            review: rating5
            },
            {
             id: 2,
-            fullname: "",
-            imagecus: "",
-            text: "",
+            fullname: "Le Xuan Son1",
+            imagecus: son1,
+            text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
             review: rating4
            },
            {
             id: 3,
-            fullname: "",
-            imagecus: "",
-            text: "",
-            review: rating4
+            fullname: "Le Xuan Son2",
+            imagecus: son2,
+            text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
+            review: rating3
            },
         ],
-        image: "",
-        price: "",
-        amount: "",
+        image: light6,
+        price: 1500,
+        amount: 50,
         rating: rating4,
-        category: ""
+        category: "lamp"
     }
 ]
+
+const getAllFuniture = () => funiture;
+
+const funitureData = {
+   getAllFuniture
+}
+
+export default funitureData
+
