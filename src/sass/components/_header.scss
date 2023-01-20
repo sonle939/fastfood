@@ -1,0 +1,123 @@
+.header {
+  @include flex(center, center);
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: $background_white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  &_top {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    justify-content: space-around;
+    transition: 0.5s linear;
+    margin-bottom: 20px;
+    h3 {
+      font-size: 25px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .header_img {
+      width: 240px;
+      height: 90px;
+      @include flex(center, center);
+      object-fit: cover;
+      margin: 0 350px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .header_icon {
+      @include flex(center, center);
+      p {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $background_black;
+      }
+      .header_icon_list {
+        @include flex(center, center);
+        margin: 0 20px;
+        .header_icon_icon {
+          @include flex(center, center);
+          font-size: 18px;
+          margin: 0 10px;
+          i {
+            font-size: 18px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  .active {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    margin-bottom: 0;
+    transition: 0.5s linear;
+  }
+  &_bottom {
+    @include flex(center, center);
+    li {
+      margin: 0 15px;
+      a {
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: $text_color;
+        text-transform: uppercase;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          left: 0;
+        }
+        &::before {
+          background-color: #78716c;
+          height: 2px;
+          bottom: 0;
+          transform-origin: 100% 50%;
+          transform: scaleX(0);
+          transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+        &::after {
+          content: attr(data-replace);
+          height: 100%;
+          top: 0;
+          transform-origin: 100% 50%;
+          transform: translate3d(200%, 0, 0);
+          transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+          color: #78716c;
+        }
+
+        &:hover::before {
+          transform-origin: 0% 50%;
+          transform: scaleX(1);
+        }
+        &:hover::after {
+          transform: translate3d(0, 0, 0);
+        }
+
+        & > span {
+          display: inline-block;
+          transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+
+        &:hover span {
+          transform: translate3d(-200%, 0, 0);
+        }
+      }
+    }
+  }
+}

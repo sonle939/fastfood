@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@300&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    user-select: none;
+}
+body{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+body::-webkit-scrollbar{
+    width: 2px;
+    border-radius: 6px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: $text_color;
+}
+body::-webkit-scrollbar-track{
+    background-color: $background_white;
+}
+ul{
+    list-style: none;  
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+input{
+    outline: none;
+}
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}

@@ -1,65 +1,65 @@
-const rating1 = require("../assets/rating1.png");
-const rating2 = require("../assets/02.png");
-const rating3 = require("../assets/rating3.png");
-const rating4 = require("../assets/rating4.png");
-const rating5 = require("../assets/rating5.png");
+const rating1_image = require("../assets/rating1.png");
+const rating2_image = require("../assets/02.png");
+const rating3_image = require("../assets/rating3.png");
+const rating4_image = require("../assets/rating4.png");
+const rating5_image = require("../assets/rating5.png");
 
 //chair
- const chair1 = require("../assets/funiture/chair/chair.png");
- const chair2 = require("../assets/funiture/chair/chair1.png");
- const chair3 = require("../assets/funiture/chair/chair2.png");
- const chair4 = require("../assets/funiture/chair/chair3.png");
- const chair5 = require("../assets/funiture/chair/chair4.png");
- const chair6 = require("../assets/funiture/chair/chair5.png");
- const chair7 = require("../assets/funiture/chair/chair6.png");
+ const chair1_image = require("../assets/funiture/chair/chair.jpg");
+ const chair2_image = require("../assets/funiture/chair/chair1.jpg");
+ const chair3_image = require("../assets/funiture/chair/chair2.jpg");
+ const chair4_image = require("../assets/funiture/chair/chair3.jpg");
+ const chair5_image = require("../assets/funiture/chair/chair7.jpg");
+ const chair6_image = require("../assets/funiture/chair/chair5.jpg");
+ const chair7_image = require("../assets/funiture/chair/chair6.jpg");
 
 //mirorr
 
-const mirorr = require("../assets/funiture/miror/miror.png");
-const mirorr1 = require("../assets/funiture/miror/miror1.png");
-const mirorr2 = require("../assets/funiture/miror/miror2.png");
-const mirorr3 = require("../assets/funiture/miror/miror3.png");
-const mirorr4 = require("../assets/funiture/miror/miror4.png");
-const mirorr5 = require("../assets/funiture/miror/miror5.png");
-const mirorr6 = require("../assets/funiture/miror/miror6.png");
+const mirorr_image = require("../assets/funiture/miror/miror.jpg");
+const mirorr1_image = require("../assets/funiture/miror/miror1.jpg");
+const mirorr2_image = require("../assets/funiture/miror/miror2.jpg");
+const mirorr3_image = require("../assets/funiture/miror/miror3.jpg");
+const mirorr4_image = require("../assets/funiture/miror/miror4.jpg");
+const mirorr5_image = require("../assets/funiture/miror/miror5.jpg");
+const mirorr6_image = require("../assets/funiture/miror/miror6.jpg");
 
 //table
 
-const table = require("../assets/funiture/table/table.png");
-const table1 = require("../assets/funiture/table/table1.png");
-const table2 = require("../assets/funiture/table/table2.png");
-const table3 = require("../assets/funiture/table/table3.png");
-const table4 = require("../assets/funiture/table/table4.png");
-const table5 = require("../assets/funiture/table/table5.png");
-const table6 = require("../assets/funiture/table/table6.png");
+const table_image = require("../assets/funiture/table/table.jpg");
+const table1_image = require("../assets/funiture/table/table1.jpg");
+const table2_image = require("../assets/funiture/table/table2.jpg");
+const table3_image = require("../assets/funiture/table/table3.jpg");
+const table4_image = require("../assets/funiture/table/table4.jpg");
+const table5_image = require("../assets/funiture/table/table5.jpg");
+const table6_image = require("../assets/funiture/table/table6.jpg");
 
 //clock
 
-const clock = require("../assets/funiture/clock/clock.png");
-const clock1 = require("../assets/funiture/clock/clock1.png");
-const clock2 = require("../assets/funiture/clock/clock2.png");
-const clock3 = require("../assets/funiture/clock/clock3.png");
-const clock4 = require("../assets/funiture/clock/clock4.png");
-const clock5 = require("../assets/funiture/clock/clock5.png");
-const clock6 = require("../assets/funiture/clock/clock6.png");
+const clock_image = require("../assets/funiture/clock/clock.jpg");
+const clock1_image = require("../assets/funiture/clock/clock1.jpg");
+const clock2_image = require("../assets/funiture/clock/clock2.jpg");
+const clock3_image = require("../assets/funiture/clock/clock3.jpg");
+const clock4_image = require("../assets/funiture/clock/clock4.jpg");
+const clock5_image = require("../assets/funiture/clock/clock5.jpg");
+const clock6_image = require("../assets/funiture/clock/clock6.jpg");
 
 //light
 
-const light = require("../assets/funiture/light/light.png");
-const light1 = require("../assets/funiture/light/light1.png");
-const light2 = require("../assets/funiture/light/light2.png");
-const light3 = require("../assets/funiture/light/light3.png");
-const light4 = require("../assets/funiture/light/light4.png");
-const light5 = require("../assets/funiture/light/light5.png");
-const light6 = require("../assets/funiture/light/light6.png");
+const light_image = require("../assets/funiture/light/lamp.jpg");
+const light1_image = require("../assets/funiture/light/lamp1.jpg");
+const light2_image = require("../assets/funiture/light/lamp2.jpg");
+const light3_image = require("../assets/funiture/light/lamp3.jpg");
+const light4_image = require("../assets/funiture/light/lamp4.jpg");
+const light5_image = require("../assets/funiture/light/lamp5.jpg");
+const light6_image = require("../assets/funiture/light/lamp6.jpg");
 
 //customer
 
-const son = require("../assets/funiture/customer/son.jpg");
-const son1 = require("../assets/funiture/customer/son1.jpg");
-const son2 = require("../assets/funiture/customer/son2.jpg");
+const son_image = require("../assets/funiture/customer/son.jpg");
+const son1_image = require("../assets/funiture/customer/son1.jpg");
+const son2_image = require("../assets/funiture/customer/son2.jpg");
 
-const funiture = [
+const funituredata = [
     {
         id: 1,
         title: "Chair name1",
@@ -68,29 +68,32 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: chair1,
+        type: "selling",
+        image: chair1_image,
         price: 2500,
         amount: 30,
-        rating: rating4,
+        manufacturer: "Calvin Klein",
+        rating: rating4_image,
+        ratingtext: "4",
         category: "chair"
     },
     {
@@ -101,29 +104,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: chair2,
+        image: chair2_image,
         price: 1850,
         amount: 80,
-        rating: rating3,
+        manufacturer: "Diesel",
+        rating: rating3_image,
+        ratingtext: "3",
         category: "chair"
     },
     {
@@ -134,29 +139,32 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: chair3,
+        image: chair3_image,
         price: 1500,
         amount: 50,
-        rating: rating5,
+        type: "selling",
+        manufacturer: "Calvin Klein",
+        rating: rating5_image,
+        ratingtext: "5",
         category: "chair"
     },
     {
@@ -167,29 +175,32 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: chair4,
+        image: chair4_image,
+        type: "selling",
         price: 4000,
         amount: 40,
-        rating: rating4,
+        manufacturer: "Diesel",
+        rating: rating4_image,
+        ratingtext: "4",
         category: "chair"
     },
     {
@@ -200,29 +211,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: chair5,
+        image: chair5_image,
         price: 5200,
         amount: 12,
-        rating: rating5,
+        type: "selling",
+        rating: rating5_image,
+        ratingtext: "5",
         category: "chair"
     },
     {
@@ -233,29 +246,32 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: chair6,
+        image: chair6_image,
         price: 2800,
         amount: 35,
-        rating: rating4,
+        type: "selling",
+        manufacturer: "Calvin Klein",
+        rating: rating4_image,
+        ratingtext: "4",
         category: "chair"
     },
     {
@@ -266,29 +282,32 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: chair7,
+        image: chair7_image,
         price: 3000,
+        type: "selling",
         amount: 15,
-        rating: rating4,
+        manufacturer: "Diesel",
+        rating: rating4_image,
+        ratingtext: "4",
         category: "chair"
     },
     {
@@ -299,29 +318,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: clock,
+        image: clock_image,
         price: 2300,
         amount: 55,
-        rating: rating4,
+        manufacturer: "Calvin Klein",
+        rating: rating4_image,
+        ratingtext: "4",
         category: "clock"
     },
     {
@@ -332,29 +353,32 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: clock1,
+        image: clock1_image,
         price: 1500,
+        type: "selling",
         amount: 16,
-        rating: rating4,
+        manufacturer: "Diesel",
+        rating: rating4_image,
+        ratingtext: "4",
         category: "clock"
     },
     {
@@ -365,29 +389,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: clock2,
+        image: clock2_image,
         price: 2900,
         amount: 50,
-        rating: rating3,
+        manufacturer: "Diesel",
+        rating: rating3_image,
+        ratingtext: "4",
         category: "clock"
     },
     {
@@ -398,29 +424,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: clock3,
+        image: clock3_image,
         price: 3500,
         amount: 39,
-        rating: rating4,
+        type: "selling",
+        rating: rating4_image,
+        ratingtext: "4",
         category: "clock"
     },
     {
@@ -431,29 +459,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: clock4,
+        image: clock4_image,
         price: 3460,
         amount: 46,
-        rating: rating4,
+        manufacturer: "Diesel",
+        rating: rating4_image,
+        ratingtext: "4",
         category: "clock"
     },
     {
@@ -464,29 +494,33 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: clock5,
+        image: clock5_image,
         price: 5678,
+        pricesale: 5000,
         amount: 78,
-        rating: rating4,
+        type: "discount",
+        manufacturer: "Diesel",
+        rating: rating4_image,
+        ratingtext: "4",
         category: "clock"
     },
     {
@@ -497,29 +531,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: clock5,
+        image: clock6_image,
         price: 6500,
         amount: 55,
-        rating: rating4,
+        manufacturer: "Tommy Hifiger",
+        rating: rating4_image,
+        ratingtext: "4",
         category: "clock"
     },
     {
@@ -530,29 +566,32 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: mirorr,
+        image: mirorr_image,
         price: 5000,
+        type: "newmod",
         amount: 24,
-        rating: rating4,
+        manufacturer: "Tommy Hifiger",
+        rating: rating2_image,
+        ratingtext: "2",
         category: "mirror"
     },
     {
@@ -563,29 +602,32 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: mirorr1,
+        image: mirorr1_image,
         price: 4200,
         amount: 42,
-        rating: rating3,
+        manufacturer: "Tommy Hifiger",
+        type: "selling",
+        rating: rating3_image,
+        ratingtext: "3",
         category: "mirror"
     },
     {
@@ -596,29 +638,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: mirorr2,
+        image: mirorr2_image,
         price: 5100,
         amount: 15,
-        rating: rating5,
+        manufacturer: "Calvin Klein",
+        rating: rating5_image,
+        ratingtext: "5",
         category: "mirror"
     },
     {
@@ -629,29 +673,32 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: mirorr3,
+        image: mirorr3_image,
         price: 4561,
         amount: 19,
-        rating: rating4,
+        type: "selling",
+        manufacturer: "Tommy Hifiger",
+        rating: rating1_image,
+        ratingtext: "1",
         category: "mirror"
     },
     {
@@ -662,29 +709,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: mirorr4,
+        image: mirorr4_image,
         price: 6500,
         amount: 56,
-        rating: rating4,
+        manufacturer: "Tommy Hifiger",
+        rating: rating2_image,
+        ratingtext: "2",
         category: "mirror"
     },
     {
@@ -695,29 +744,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: mirorr5,
+        image: mirorr5_image,
         price: 7500,
         amount: 70,
-        rating: rating4,
+        manufacturer: "Tommy Hifiger",
+        rating: rating3_image,
+        ratingtext: "3",
         category: "mirror"
     },
     {
@@ -728,29 +779,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: mirorr6,
+        image: mirorr6_image,
         price: 5600,
         amount: 23,
-        rating: rating4,
+        manufacturer: "Calvin Klein",
+        rating: rating4_image,
+        ratingtext: "4",
         category: "mirror"
     },
     {
@@ -761,29 +814,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: table,
+        image: table_image,
         price: 2300,
         amount: 25,
-        rating: rating4,
+        manufacturer: "Polo",
+        rating: rating5_image,
+        ratingtext: "5",
         category: "table"
     },
     {
@@ -794,29 +849,30 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: table1,
+        image: table1_image,
         price: 3200,
         amount: 29,
-        rating: rating4,
+        rating: rating2_image,
+        ratingtext: "2",
         category: "table"
     },
     {
@@ -827,29 +883,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: table2,
+        image: table2_image,
         price: 7990,
         amount: 36,
-        rating: rating4,
+        type: "newmod",
+        rating: rating3_image,
+        ratingtext: "3",
         category: "table"
     },
     {
@@ -860,29 +918,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: table3,
+        image: table3_image,
         price: 3456,
         amount: 65,
-        rating: rating4,
+        manufacturer: "Polo",
+        rating: rating1_image,
+        ratingtext: "1",
         category: "table"
     },
     {
@@ -893,29 +953,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: table4,
+        image: table4_image,
         price: 4210,
         amount: 16,
-        rating: rating4,
+        type: "newmod",
+        rating: rating4_image,
+        ratingtext: "4",
         category: "table"
     },
     {
@@ -926,29 +988,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: table5,
+        image: table5_image,
         price: 5321,
         amount: 52,
-        rating: rating4,
+        manufacturer: "Polo",
+        rating: rating4_image,
+        ratingtext: "4",
         category: "table"
     },
     {
@@ -959,30 +1023,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: table6,
+        image: table6_image,
         price: 6210,
         amount: 62,
-        rating: rating4,
-        category: ""
+        rating: rating3_image,
+        ratingtext: "3",
+        category: "table"
     },
     {
         id: 29,
@@ -992,29 +1057,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: light,
+        image: light_image,
         price: 2550,
         amount: 50,
-        rating: rating3,
+        type: "newmod",
+        rating: rating3_image,
+        ratingtext: "3",
         category: "lamp"
     },
     {
@@ -1025,29 +1092,33 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: light1,
+        image: light1_image,
         price: 3434,
+        pricesale: 3000,
         amount: 43,
-        rating: rating4,
+        type: "discount",
+        manufacturer: "Polo",
+        rating: rating4_image,
+        ratingtext: "4",
         category: "lamp"
     },
     {
@@ -1058,29 +1129,32 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: light2,
+        image: light2_image,
         price: 8200,
+        pricesale:8000,
         amount: 100,
-        rating: rating4,
+        type: "discount",
+        rating: rating5_image,
+        ratingtext: "5",
         category: "lamp"
     },
     {
@@ -1091,29 +1165,32 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: light3,
+        image: light3_image,
         price: 5400,
         amount: 34,
-        rating: rating4,
+        manufacturer: "Polo",
+        type: "newmod",
+        rating: rating4_image,
+        ratingtext: "4",
         category: "lamp"
     },
     {
@@ -1124,29 +1201,31 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: light4,
+        image: light4_image,
         price: 2654,
         amount: 19,
-        rating: rating5,
+        type: "newmod",
+        rating: rating2_image,
+        ratingtext: "2",
         category: "lamp"
     },
     {
@@ -1157,29 +1236,33 @@ const funiture = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son,
+             imagecus: son_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-             review: rating5
+             review: rating5_image
             },
             {
              id: 2,
              fullname: "Le Xuan Son1",
-             imagecus: son1,
+             imagecus: son1_image,
              text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-             review: rating4
+             review: rating4_image
             },
             {
              id: 3,
              fullname: "Le Xuan Son2",
-             imagecus: son2,
+             imagecus: son2_image,
              text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-             review: rating3
+             review: rating3_image
             },
          ],
-        image: light5,
+        image: light5_image,
         price: 7800,
+        manufacturer: "Polo",
+        pricesale: 7000,
         amount: 56,
-        rating: rating3,
+        type: "discount",
+        rating: rating3_image,
+        ratingtext: "3",
         category: "lamp"
     },
     {
@@ -1190,38 +1273,48 @@ const funiture = [
            {
             id: 1,
             fullname: "Le Xuan Son",
-            imagecus: son,
+            imagecus: son_image,
             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
-            review: rating5
+            review: rating5_image
            },
            {
             id: 2,
             fullname: "Le Xuan Son1",
-            imagecus: son1,
+            imagecus: son1_image,
             text: "The product above all is great, I have bought 10 products from this shop so far for my relatives to use and it is extremely durable.",
-            review: rating4
+            review: rating4_image
            },
            {
             id: 3,
             fullname: "Le Xuan Son2",
-            imagecus: son2,
+            imagecus: son2_image,
             text: "Good product, stable voltage in such a price range, I have bought it in many places, but nowhere makes me as satisfied as this place.",
-            review: rating3
+            review: rating3_image
            },
         ],
-        image: light6,
+        image: light6_image,
         price: 1500,
+        pricesale: 1000,
         amount: 50,
-        rating: rating4,
+        type: "discount",
+        rating: rating4_image,
+        ratingtext: "4",
+        manufacturer: "Polo",
         category: "lamp"
     }
 ]
 
-const getAllFuniture = () => funiture;
+// const getAllFuniture = () => funituredata;
+// const getFunitures = (count) => {
+//     const max = funituredata.length - count
+//     const min = 0
+//     const start = Math.floor(Math.random() * (max - min) + min)
+//     return funituredata.slice(start, start + count)
+// }
+// const funitureDatalist = {
+//    getAllFuniture,
+//    getFunitures
+// }
 
-const funitureData = {
-   getAllFuniture
-}
-
-export default funitureData
+export default funituredata
 
