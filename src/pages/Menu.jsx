@@ -17,7 +17,7 @@ function Menu() {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = tab.slice(indexOfFirstPost, indexOfLastPost);
-  const [actie,setActive] = useState(true);
+  const [actie, setActive] = useState(true);
 
   return (
     <div className="menu">
@@ -27,7 +27,7 @@ function Menu() {
         </Helmet>
         <ScrollToTop smooth top="100" />
         <Header />
-        <Breadcrum /> 
+        <Breadcrum />
         <div className="menu_container">
           <div className="menu_left">
             <div className="menuleft_title">
@@ -98,16 +98,16 @@ function Menu() {
             <div className="rated_category">
               <h3>Top rated</h3>
               <div className="category_list">
-                {funituredata.filter(item => item.ratingtext == "5" && item.price >=3000).map(render=>(
+                {funituredata.filter(item => item.ratingtext == "5" && item.price >= 3000).map(render => (
                   <div className="category_item" key={render.id}>
-                      <img src={render.image} alt="" />
-                      <div className="category_text">
-                          <img src={render.rating} alt="" />
-                          <h2>{render.title}</h2>
-                          <p>$ {render.price}</p>
-                      </div>
+                    <img src={render.image} alt="" />
+                    <div className="category_text">
+                      <img src={render.rating} alt="" />
+                      <h2>{render.title}</h2>
+                      <p>$ {render.price}</p>
+                    </div>
                   </div>
-                )) }
+                ))}
               </div>
             </div>
           </div>
@@ -115,17 +115,17 @@ function Menu() {
             <img src={categoryimg} />
             <div className="menuright_control">
               <div className="right_icon">
-                <div className={actie ? "righticon_item": "righticon_item active"} onClick={()=>setActive(true)}>
+                <div className={actie ? "righticon_item" : "righticon_item active"} onClick={() => setActive(true)}>
                   <i className="fa fa-th" aria-hidden="true"></i>
                 </div>
-                <div className={actie ? "righticon_item active": "righticon_item"}  onClick={()=>setActive(false)}>
+                <div className={actie ? "righticon_item active" : "righticon_item"} onClick={() => setActive(false)}>
                   <i className="fa fa-th-list" aria-hidden="true"></i>
                 </div>
               </div>
               <div className="right_sort">
                 <h3>Sort by: </h3>
                 <select name="sortby" id="sortby">
-                <option value="default">Default</option>
+                  <option value="default">Default</option>
                   <option value="Product Name">Product Name</option>
                   <option value="Price">Price</option>
                   <option value="rating">Rating</option>
@@ -134,33 +134,47 @@ function Menu() {
               </div>
             </div>
             <div className="menuright_list">
-                {currentPosts.map(item=>(
-                  <div className={actie ? "menuright_item":"menuright_item active"} key={item.id}>
-                      <img src={item.image}/>
-                      <div className="menuright_des">
-                          <h3>{item.title}</h3>
-                          <p>${item.price}</p>
-                        <div className={actie ? "hide":"hide active"}>
-                            <img src={item.rating}/>
-                            <p>{item.customerreview.filter(item1=>item.description).length} review</p>
-                        </div>
-                        <h5 className={actie ? "hide":"hide active"}>{item.description}</h5>
-                        <div className={actie ? "hide":"hide active"}>
-                            <button><i className="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
-                            <button><i className="fa fa-heart-o" aria-hidden="true"></i></button>
-                        </div>
-                      </div>
+              {currentPosts.map(item => (
+                <div className={actie ? "menuright_item" : "menuright_item active"} key={item.id}>
+                  <img src={item.image} />
+                  <div className="menuright_des">
+                    <img src={item.rating} className={actie ? "image active":"image"}/>
+                    <h3>{item.title}</h3>
+                    <p>${item.price}</p>
+                    <div className={actie ? "hide" : "hide active"}>
+                      <img src={item.rating} />
+                      <p>{item.customerreview.filter(item1 => item.description).length} review</p>
+                    </div>
+                    <h5 className={actie ? "hide" : "hide active"}>{item.description}</h5>
+                    <div className={actie ? "hide" : "hide active"}>
+                      <button><i className="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                      <button><i className="fa fa-heart-o" aria-hidden="true"></i></button>
+                    </div>
                   </div>
-                ))}
+                  <div className={actie ? "menuright_item_overlay active": "menuright_item_overlay"}>
+                    <div className="overlay_control">
+                      <Link className="control_item">
+                        <i className="fa fa-cart-plus" aria-hidden="true"></i>
+                      </Link>
+                      <Link className="control_item">
+                        <i className="fa fa-heart-o" aria-hidden="true"></i>
+                      </Link>
+                      <Link className="control_item" to={`/details/${item.id}`}>
+                        <i className="fa fa-eye" aria-hidden="true"></i>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-            <Pagination     
-            postsPerPage={postsPerPage}
-            totalPosts={tab.length}
-            paginate={paginate}
+            <Pagination
+              postsPerPage={postsPerPage}
+              totalPosts={tab.length}
+              paginate={paginate}
             />
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </HelmetProvider>
     </div>
   )

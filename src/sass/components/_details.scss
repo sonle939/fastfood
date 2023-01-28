@@ -1,0 +1,277 @@
+.details {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 200px;
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    margin-left: 270px;
+    a {
+      text-transform: capitalize;
+      font-size: 19px;
+      font-weight: normal;
+      color: #434343;
+      &:nth-child(1) {
+        color: #ccc;
+      }
+    }
+    p {
+      margin: 0 5px;
+      font-size: 20px;
+    }
+    h5 {
+      font-size: 19px;
+      letter-spacing: 1px;
+      color: #434343;
+    }
+  }
+  &_wrapper {
+    width: 100%;
+    display: flex;
+
+    padding: 10px;
+    padding-left: 270px;
+    margin-top: 70px;
+  }
+  &_item {
+    display: flex;
+    align-items: center;
+    img {
+      height: 550px;
+      width: 705px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .details_des {
+      margin-left: 30px;
+      h2 {
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: 0.025em;
+        margin: 0;
+        color: #434343;
+        font-weight: 700;
+        text-transform: inherit;
+      }
+      .details_rating {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 30px;
+        img {
+          width: 90px;
+          height: 20px;
+          object-fit: cover;
+          opacity: 0.9;
+          margin-right: 20px;
+        }
+        p {
+          letter-spacing: 1px;
+          color: #e1e1e1;
+        }
+      }
+      .price_details {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 30px;
+        p {
+          margin: 0 5px;
+          color: #434343;
+          font-size: 24px;
+          line-height: 24px;
+          letter-spacing: 0.025em;
+          display: inline-block;
+          font-weight: 700;
+        }
+        .old {
+          text-decoration: line-through;
+          color: #e1e1e1;
+          &.active {
+            color: #434343;
+            font-size: 24px;
+            line-height: 24px;
+            letter-spacing: 0.025em;
+            display: inline-block;
+            font-weight: 700;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .amount {
+      letter-spacing: 1px;
+      color: #434343;
+      font-weight: 400;
+      margin-top: 10px;
+      font-size: 20px;
+      font-style: italic;
+    }
+    .details_amount {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      p {
+        margin: 0 10px;
+        font-size: 20px;
+        height: 35px;
+        width: 35px;
+        font-weight: bold;
+        background-color: transparent;
+        border: 1px solid #434343;
+        border-radius: 12px;
+        @include flex(center, center);
+      }
+      div {
+        height: 35px;
+        width: 35px;
+        border: 1px solid #434343;
+        border-radius: 12px;
+        @include flex(center, center);
+        font-size: 40px;
+      }
+    }
+    .details-mota {
+      margin: 30px 0;
+      border-bottom: 1px solid #ebebeb;
+      border-top: 1px solid #ebebeb;
+      text-align: center;
+      width: 500px;
+      line-height: 24px;
+      padding: 10px;
+    }
+    .details_btn {
+      display: flex;
+      align-items: center;
+      button {
+        @include flex(center, center);
+        background: #ebebeb;
+        height: 50px;
+        width: 200px;
+        font-size: 18px;
+        border-radius: 40px;
+        margin: 20px 10px;
+        i {
+          margin-right: 10px;
+        }
+        &:nth-child(2) {
+          border-radius: 50%;
+          width: 50px;
+          i {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  &_tabs {
+    display: flex;
+    flex-direction: column;
+    margin-left: 270px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    .tabs_control {
+   display: flex;
+   justify-content: flex-start;
+      margin-bottom: 30px;
+      .tabs_item {
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #484848;
+        letter-spacing:1px ;
+        margin: 0 20px;
+        font-weight: bold;
+      }.active{
+        border-bottom: 3px solid #484848;
+      }
+
+    }
+    .tab_content{
+      width: 100%;
+      height: auto;
+      .description_text{
+        width: 80%;
+        line-height: 24px;
+        letter-spacing: 1px;
+        font-style: italic;
+      }
+      .customer_list{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        .customer_item{
+          display: flex;
+          align-items: center;
+          margin: 18px 0;
+          img{
+            border-radius: 50%;
+            object-fit: cover;
+            width: 80px;
+            height: 80px;
+          }
+          .customer_text{
+            margin-left: 20px;
+            h2{
+              font-size: 19px;
+              letter-spacing: 1px;
+              font-weight: 400px;
+            }
+            img{
+              width: 60px;
+              height: 40px;
+              object-fit: cover;
+              margin-top: -8px;
+            }
+            p{
+              line-height: 24px;
+              letter-spacing: 1px;
+              font-style: italic;
+              margin-top: -8px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .related{
+    @include flex(center, center);
+    flex-direction: column;
+    margin-bottom: 50px;
+    &_top{
+      @include flex(center, center);
+      flex-direction: column;
+      margin-bottom: 30px;
+      h2{
+        color: #333;
+        letter-spacing: 1px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .line{
+        position: relative;
+        height: 3px;
+        width: 400px;
+        border-radius: 12px;
+        background-color: #e1e1e1;
+        &_icon{
+          position: absolute;
+          top: 50%;
+          left: 45%;
+          transform: translateY(-50%);
+          @include flex(center, center);
+          height: 45px;
+          width: 45px;
+          border-radius: 50%;
+          background-color: white;
+          z-index: 99;
+          i{
+            color: #e1e1e1;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,4 @@
+
 .introduce {
   @include flex(center, center);
   flex-direction: column;
@@ -376,26 +377,28 @@
       }
       .wrapper_control {
         position: absolute;
-        top: 0;
+        top: 0; 
         left: 0;
         width: 100%;
         height: 70%;
         @include flex(center, center);
         flex-direction: column;
         border-radius: 6px;
-        background-color: rgba(0, 0, 0, 0.6);
         opacity: 0;
         .control_list {
           .control_item {
-            height: 50px;
-            width: 50px;
-            background-color: rgba(255, 255, 255, 0.9);
+            height: 45px;
+            width: 45px;
+            background-color: #fff;
+            margin: 0 10px;
+            border-radius: 50%;
             @include flex(center, center);
             i {
-              font-size: 20px;
-              color: #222;
+              font-size: 19px;
+              color: $text_color;
             }
           }
+          @include flex(center,center);
           transform: translateY(40px);
           opacity: 0;
         }

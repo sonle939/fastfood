@@ -112,15 +112,15 @@ function Ourproduct() {
               {item.type === "newmod" && <div className='type_item'>{item.type}</div>}
               <div className='wrapper_control'>
                 <div className='control_list'>
-                  <div className='control_item'>
+                  <Link className='control_item'>
                     <i className="fa fa-heart-o" aria-hidden="true"></i>
-                  </div>
-                  <div className='control_item'>
+                  </Link>
+                  <Link className='control_item' to={`/details/${item.id}`}>
                     <i className="fa fa-eye" aria-hidden="true"></i>
-                  </div>
-                  <div className='control_item'>
+                  </Link>
+                  <Link className='control_item'>
                     <i className="fa fa-cart-plus" aria-hidden="true"></i>
-                  </div>
+                  </Link>
                 </div>
               </div>
               <div className='wrapper_description'>

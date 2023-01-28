@@ -9,7 +9,7 @@ const rating5_image = require("../assets/rating5.png");
  const chair2_image = require("../assets/funiture/chair/chair1.jpg");
  const chair3_image = require("../assets/funiture/chair/chair2.jpg");
  const chair4_image = require("../assets/funiture/chair/chair3.jpg");
- const chair5_image = require("../assets/funiture/chair/chair7.jpg");
+ const chair5_image = require("../assets/funiture/chair/chair4.jpg");
  const chair6_image = require("../assets/funiture/chair/chair5.jpg");
  const chair7_image = require("../assets/funiture/chair/chair6.jpg");
 
@@ -58,7 +58,7 @@ const light6_image = require("../assets/funiture/light/lamp6.jpg");
 const son_image = require("../assets/funiture/customer/son.jpg");
 const son1_image = require("../assets/funiture/customer/son1.jpg");
 const son2_image = require("../assets/funiture/customer/son2.jpg");
-
+ 
 const funituredata = [
     {
         id: 1,

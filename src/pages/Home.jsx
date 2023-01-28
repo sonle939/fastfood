@@ -6,7 +6,7 @@ import Ourproduct from '../components/Ourproduct';
 import ScrollToTop from "react-scroll-to-top";
 import Footer from '../components/Footer';
 function Home() {
-  
+
   const databout = [
     {
       id: 1,
