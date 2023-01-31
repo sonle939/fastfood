@@ -46,7 +46,7 @@ function Ourproduct() {
       return itemdata.type === type;
     })
     setTypeData(filteritem);
-  }
+  } 
   return (
     <div className='sell'>
       <div className='sell_category'>
@@ -95,10 +95,10 @@ function Ourproduct() {
             <div className='line'></div>
           </div>
           <div className='hot_control_item'>
-            <div onClick={() => { setTypeData(funituredata); setActive("all"); }} className={active === "all" ? "div animation_line" : "div"}>All product</div>
-            <div onClick={() => { filterData("newmod"); setActive("newmod"); }} className={active === "newmod" ? "div line1" : "div"}>Latest product</div>
-            <div onClick={() => { filterData("selling"); setActive("selling"); }} className={active === "selling" ? "div line2" : "div"}>Top rating</div>
-            <div onClick={() => { filterData("discount"); setActive("discount"); }} className={active === "discount" ? "div line3" : "div"}>Best seller</div>
+            <div onClick={() => { setTypeData(funituredata); setActive("all"); }} className={active === "all" ? "item_contol active" : "item_contol "}>All product</div>
+            <div onClick={() => { filterData("newmod"); setActive("newmod"); }} className={active === "newmod" ? "item_contol active" : "item_contol "}>Latest product</div>
+            <div onClick={() => { filterData("selling"); setActive("selling"); }} className={active === "selling" ? "item_contol active" : "item_contol "}>Top rating</div>
+            <div onClick={() => { filterData("discount"); setActive("discount"); }} className={active === "discount" ? "item_contol active" : "item_contol"}>Best seller</div>
             <div className='animation_line line'></div>
           </div>
           <Link to="/menu">go to menu<i className="fa fa-arrow-right" aria-hidden="true"></i></Link>

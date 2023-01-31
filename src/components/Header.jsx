@@ -7,7 +7,7 @@ function Header() {
     const fixHide = () => {
         if (window.scrollY >= 100) {
             setFix(true)
-        } else {
+        } else { 
             setFix(false)
         }
     }

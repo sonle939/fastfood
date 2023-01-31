@@ -10,7 +10,6 @@ function Details() {
   const [tab, setTab] = useState(true);
   const [count, setCount] = useState(1);
   const [data,setData] = useState([]);
-  const [data1,setData1] = useState("");
     const filterData = () => {
       const filteritem = funituredata.filter((itemdata) => {
         return itemdata.id == id;
@@ -20,13 +19,12 @@ function Details() {
     useEffect(()=>{
       filterData();
     },[])
-    console.log(data1)
-    const filterData1 = () => {
-      const filteritem = data.find((itemdata) => {
-        return itemdata.category ;
-      })
-      setData1(filteritem);
-    }
+    console.log(data.includes("category"))
+    // {funituredata.map(item=>(
+    //   <div className='related_item'>
+    //       <h1>{item.price}</h1>
+    //   </div>
+    //  ))}
   return (
     <div className='details'>
       <HelmetProvider>
@@ -45,7 +43,7 @@ function Details() {
           ))}
         </div>
         <div className='details_wrapper'>
-          {funituredata.filter(item => item.id == id).map(item1 => (
+          {data.map(item1 => (
             <div className='details_item' key={item1.id}>
               <img src={item1.image} />
               <div className='details_des'>
@@ -80,14 +78,14 @@ function Details() {
             <div onClick={() => { setTab(true); }} className={tab ? "tabs_item active" : "tabs_item"}>description</div>
             <div onClick={() => { setTab(false); }} className={tab ? "tabs_item" : "tabs_item active"}>customer review</div>
           </div>
-          {funituredata.filter(item => item.id == id).map(item1 => (
-            <div className='tab_content'>
+          {data.map(item1 => (
+            <div className='tab_content' key={item1.id}>
               {tab == true ?
                 <p className='description_text'>{item1.description}</p> :
                 (
                   <div className='customer_list'>
                     {item1.customerreview.map(item2 => (
-                      <div className='customer_item'>
+                      <div className='customer_item' key={item2.id}>
                         <img src={item2.imagecus} />
                         <div className='customer_text'>
                           <h2>{item2.fullname}</h2>
@@ -111,11 +109,7 @@ function Details() {
             </div>
           </div>
           <div className='related_bottom'>
-             {funituredata.map(item=>(
-              <div className='related_item'>
-          
-              </div>
-             ))}
+ 
           </div>
         </div>
         <Footer/>

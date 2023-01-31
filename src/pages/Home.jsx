@@ -27,7 +27,7 @@ function Home() {
       description: "If the purchase is damaged because the manufacturer is allowed exchange",
     }
   ]
-
+ 
   return (
     <div className='home'>
       <HelmetProvider>
@@ -48,24 +48,34 @@ function Home() {
                 their own "quality" as well as let customers
                 have can easily reach me</p>
             </div>
+            <div className='introduce_iamge'>
             <img src="https://i.pinimg.com/564x/85/6b/ee/856bee2959e33d62af16c0ca6e1d7d2e.jpg" />
+            <h3>LeeXs luxury</h3>
+            <div className='border'></div>
+            </div>
           </div>
           <div className='introduce_bottom'>
             <div className='introduce_item'>
               <div className='introduce_image'>
                 <img src="https://i.pinimg.com/564x/1d/80/a9/1d80a93b5d30ae65b891d971429f28d5.jpg" />
+                <p>Combination of many unique styles</p>
+                <div className='border'></div>
               </div>
               <p>Combination of many unique styles</p>
             </div>
             <div className='introduce_item'>
               <div className='introduce_image'>
                 <img src="https://i.pinimg.com/564x/2e/0f/79/2e0f798bd11e40ed4699dc6839eb92f5.jpg" />
+                <p>Bringing innovation to each product</p>
+                <div className='border'></div>
               </div>
               <p>Bringing innovation to each product</p>
             </div>
             <div className='introduce_item'>
               <div className='introduce_image'>
                 <img src="https://i.pinimg.com/564x/ca/32/ef/ca32efd88d1d0dd763fa6dfdeb472116.jpg" />
+                <p>Always ensure a high quality</p>
+                <div className='border'></div>
               </div>
               <p>Always ensure a high quality</p>
             </div>
