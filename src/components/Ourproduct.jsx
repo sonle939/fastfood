@@ -46,11 +46,13 @@ function Ourproduct() {
       return itemdata.type === type;
     })
     setTypeData(filteritem);
-  } 
+  }
   return (
     <div className='sell'>
       <div className='sell_category'>
-        <div className='category_text'>
+        <div className='category_text'
+          data-aos="fade-right"
+          data-aos-offset="300">
           <h3>Shop by category</h3>
           <div className='line'></div>
           <div className='category_amount'>
@@ -62,7 +64,9 @@ function Ourproduct() {
         <div className='category_image'>
           {
             dataCategory.map(item => (
-              <div className='category_item' key={item.id}>
+              <div className='category_item' key={item.id} data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine">
                 <img src={item.image} />
                 <h3>{item.title}</h3>
               </div>
@@ -71,7 +75,8 @@ function Ourproduct() {
         </div>
       </div>
       <div className='more'>
-        <div className='more_item'>
+        <div className='more_item' data-aos="fade-up-right"
+        data-aos-offset="50 0">
           <img src='https://i.pinimg.com/564x/1c/7b/cc/1c7bcc3ebb02ab5ae82a81205636fe73.jpg' />
           <div className='more_item-text'>
             <p>50% off all order</p>
@@ -79,7 +84,8 @@ function Ourproduct() {
             <button>Shop now</button>
           </div>
         </div>
-        <div className='more_item'>
+        <div className='more_item' data-aos="fade-up-left"
+        data-aos-offset="500">
           <img src='https://i.pinimg.com/736x/9d/27/b2/9d27b2f0d0fbf5aea36ca168487ff6a1.jpg' />
           <div className='more_item-text'>
             <p>50% off all order</p>
@@ -106,7 +112,7 @@ function Ourproduct() {
         <div className='hot_wrapper'>
           {typeData.map(item => (
             <div className='wrapper-item' key={item.id}>
-              <img src={item.image} alt="" />
+              <img src={item.image} alt="" className='img_hover' />
               {item.type === "discount" && <div className='type_item'>{item.type}</div>}
               {item.type === "selling" && <div className='type_item'>{item.type}</div>}
               {item.type === "newmod" && <div className='type_item'>{item.type}</div>}
@@ -134,21 +140,21 @@ function Ourproduct() {
       </div>
       <div className='supplise'>
         <div className='supplise_text'>
-            <h2>We design digital products</h2>
-            <i className="fa fa-cubes" aria-hidden="true"></i>
-            <p>
-            A house with beautiful interior design brings back aesthetic value 
-            and value for money. When your home is beautifully furnished, it 
-            will certainly appreciate more when you sell it. Besides, 
-            everyone wants to live in a beautiful space, 
+          <h2>We design digital products</h2>
+          <i className="fa fa-cubes" aria-hidden="true"></i>
+          <p>
+            A house with beautiful interior design brings back aesthetic value
+            and value for money. When your home is beautifully furnished, it
+            will certainly appreciate more when you sell it. Besides,
+            everyone wants to live in a beautiful space,
             because it will directly affect the owners psychology.
-            </p>
+          </p>
         </div>
         <div className='supplise_image'>
           {
             dataAbout.map(item => (
               <div className='supplise_item' key={item.id}>
-                  <img src={item.image}/>
+                <img src={item.image} />
               </div>
             ))
           }

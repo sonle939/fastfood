@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from "../components/Header";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Slider from '../components/Slider';
 import Ourproduct from '../components/Ourproduct';
 import ScrollToTop from "react-scroll-to-top";
 import Footer from '../components/Footer';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 function Home() {
 
   const databout = [
@@ -27,7 +29,9 @@ function Home() {
       description: "If the purchase is damaged because the manufacturer is allowed exchange",
     }
   ]
- 
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, [])
   return (
     <div className='home'>
       <HelmetProvider>
@@ -35,7 +39,7 @@ function Home() {
           <title>Home</title>
         </Helmet>
         <ScrollToTop smooth top="100" />
-        <Header/>
+        <Header />
         <Slider />
         <div className='introduce'>
           <div className='introduce_top'>
@@ -49,13 +53,15 @@ function Home() {
                 have can easily reach me</p>
             </div>
             <div className='introduce_iamge'>
-            <img src="https://i.pinimg.com/564x/85/6b/ee/856bee2959e33d62af16c0ca6e1d7d2e.jpg" />
-            <h3>LeeXs luxury</h3>
-            <div className='border'></div>
+              <img src="https://i.pinimg.com/564x/85/6b/ee/856bee2959e33d62af16c0ca6e1d7d2e.jpg" />
+              <h3>LeeXs luxury</h3>
+              <div className='border'></div>
             </div>
           </div>
           <div className='introduce_bottom'>
-            <div className='introduce_item'>
+            <div className='introduce_item' data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine">
               <div className='introduce_image'>
                 <img src="https://i.pinimg.com/564x/1d/80/a9/1d80a93b5d30ae65b891d971429f28d5.jpg" />
                 <p>Combination of many unique styles</p>
@@ -63,7 +69,8 @@ function Home() {
               </div>
               <p>Combination of many unique styles</p>
             </div>
-            <div className='introduce_item'>
+            <div className='introduce_item' data-aos="fade-up"
+              data-aos-duration="3000">
               <div className='introduce_image'>
                 <img src="https://i.pinimg.com/564x/2e/0f/79/2e0f798bd11e40ed4699dc6839eb92f5.jpg" />
                 <p>Bringing innovation to each product</p>
@@ -71,7 +78,9 @@ function Home() {
               </div>
               <p>Bringing innovation to each product</p>
             </div>
-            <div className='introduce_item'>
+            <div className='introduce_item' data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine">
               <div className='introduce_image'>
                 <img src="https://i.pinimg.com/564x/ca/32/ef/ca32efd88d1d0dd763fa6dfdeb472116.jpg" />
                 <p>Always ensure a high quality</p>
@@ -86,7 +95,9 @@ function Home() {
             <h1>salient features</h1>
             <i className="fa fa-cubes" aria-hidden="true"></i>
           </div>
-          <div className='about_outstanding'>
+          <div className='about_outstanding' data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
             {
               databout.map((item) => (
                 <div className='about_item' key={item.id}>
@@ -103,8 +114,8 @@ function Home() {
             }
           </div>
         </div>
-        <Ourproduct/>
-        <Footer/>
+        <Ourproduct />
+        <Footer />
       </HelmetProvider>
     </div>
   )
