@@ -9,7 +9,7 @@ import ScrollToTop from "react-scroll-to-top";
 import Pagination from "../components/Pagination";
 import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
-function Menu({handleAddToCart}) {
+function Menu({cart,handleAddToCart}) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(9);
   const [tab, setTab] = useState(funituredata);
@@ -18,7 +18,7 @@ function Menu({handleAddToCart}) {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = tab.slice(indexOfFirstPost, indexOfLastPost);
   const [actie, setActive] = useState(true);
-
+  console.log(cart);
   return (
     <motion.div className="menu"
     inital={{opacity: 0}}
@@ -30,7 +30,6 @@ function Menu({handleAddToCart}) {
           <title>Menu</title>
         </Helmet>
         <ScrollToTop smooth top="100" />
-        <Header />
         <Breadcrum />
         <div className="menu_container">
           <div className="menu_left">
@@ -153,14 +152,14 @@ function Menu({handleAddToCart}) {
                     </div>
                     <h5 className={actie ? "hide" : "hide active"}>{item.description}</h5>
                     <div className={actie ? "hide" : "hide active"}>
-                      <button><i className="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                      <button onClick={()=>handleAddToCart(item)}><i className="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
                       <button><i className="fa fa-heart-o" aria-hidden="true"></i></button>
                     </div>
                   </div>
                   <div className={actie ? "menuright_item_overlay active" : "menuright_item_overlay"}>
                     <div className="overlay_control">
-                      <Link className="control_item" onClick={handleAddToCart}>
-                        <i className="fa fa-cart-plus" aria-hidden="true"></i>
+                      <Link className="control_item">
+                        <i onClick={()=>handleAddToCart(item)} className="fa fa-cart-plus" aria-hidden="true"></i>
                       </Link>
                       <Link className="control_item">
                         <i className="fa fa-heart-o" aria-hidden="true"></i>

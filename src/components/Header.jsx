@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import logo from "../assets/logo2.png";
-function Header() {
+function Header({cart}) {
     const [fix, setFix] = useState(false);
     const [active, setActive] = useState(true);
     const fixHide = () => {
@@ -23,7 +23,8 @@ function Header() {
                     <p>Login</p>
                     <div className='header_icon_list'>
                         <Link to="/cart" className='header_icon_icon'>
-                            <i className="fa fa-shopping-cart" aria-hidden="true"></i> (0)
+                            <i className="fa fa-shopping-cart" aria-hidden="true"></i> 
+                            {cart.length === 0 ?"(0)":<p>({cart.length})</p>}
                         </Link>
                         <div className='header_icon_icon'>
                             <i className="fa fa-heart-o" aria-hidden="true"></i> (0)

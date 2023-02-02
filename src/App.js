@@ -7,6 +7,7 @@ import Menu from "./pages/Menu";
 import Cart from "./pages/Cart";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import Header from "./components/Header";
 function App() {
   const location = useLocation();
   const [cart, setCart] = useState([]);
@@ -39,11 +40,12 @@ function App() {
   };
   return (
     <AnimatePresence>
+      <Header cart={cart}/>
       <Routes location={location} key={location.pathname}>
-        <Route path='/' element={<Home cart={cart} />} />
+        <Route path='/' element={<Home handleAddToCart={handleAddToCart}/>} />
         <Route path='/cart' element={<Cart cart={cart} setCart={setCart} handleRemoveFromCart={handleRemoveFromCart}
           handleAddToCart={handleAddToCart} />} />
-        <Route path='/menu' element={<Menu handleAddToCart={handleAddToCart}/>} />
+        <Route path='/menu' element={<Menu cart={cart} handleAddToCart={handleAddToCart}/>} />
         <Route path='/details/:id' element={<Details handleRemoveFromCart={handleRemoveFromCart}
         handleAddToCart={handleAddToCart}/>} />
       </Routes>

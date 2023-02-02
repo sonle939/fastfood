@@ -37,7 +37,6 @@ function Details() {
           <title>Home</title>
         </Helmet>
         <ScrollToTop smooth top="100" />
-        <Header />
         <div className="breadcrumb">
           <Link to="/"><i className="fa fa-home" aria-hidden="true"></i></Link>
           <p>/</p>
