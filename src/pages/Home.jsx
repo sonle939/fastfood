@@ -7,6 +7,7 @@ import ScrollToTop from "react-scroll-to-top";
 import Footer from '../components/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { motion } from 'framer-motion';
 function Home() {
 
   const databout = [
@@ -33,7 +34,11 @@ function Home() {
     AOS.init({ duration: 2000 });
   }, [])
   return (
-    <div className='home'>
+    <motion.div className='home'
+      inital={{opacity: 0}}
+      animate={{opacity:1}}
+      exit={{opacity:0}}
+    >
       <HelmetProvider>
         <Helmet>
           <title>Home</title>
@@ -95,8 +100,8 @@ function Home() {
             <h1>salient features</h1>
             <i className="fa fa-cubes" aria-hidden="true"></i>
           </div>
-          <div className='about_outstanding' data-aos="fade-down"
-            data-aos-easing="linear"
+          <div className='about_outstanding' data-aos="fade-up"
+            data-aos-easing="easing"
             data-aos-duration="1500">
             {
               databout.map((item) => (
@@ -117,7 +122,7 @@ function Home() {
         <Ourproduct />
         <Footer />
       </HelmetProvider>
-    </div>
+    </motion.div>
   )
 }
 

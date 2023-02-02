@@ -18,20 +18,20 @@ function Header() {
                 <h3>welcome to leexs</h3>
                 <div className='header_img'>
                     <img src={logo} />
-                </div>
+                </div> 
                 <div className='header_icon'>
                     <p>Login</p>
                     <div className='header_icon_list'>
-                        <div className='header_icon_icon'>
+                        <Link to="/cart" className='header_icon_icon'>
                             <i className="fa fa-shopping-cart" aria-hidden="true"></i> (0)
-                        </div>
+                        </Link>
                         <div className='header_icon_icon'>
                             <i className="fa fa-heart-o" aria-hidden="true"></i> (0)
                         </div>
                         <div className='header_icon_icon'>
                             <i className="fa fa-search" aria-hidden="true" onClick={() => setActive(!active)}></i>
                         </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
             <ul className='header_bottom'>

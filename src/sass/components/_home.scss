@@ -497,8 +497,29 @@
       text-transform: capitalize;
       background-color: transparent;
       color: #000;
+      transition: all .5s linear;
       i {
         margin-left: 5px;
+        transition: all .4s ease-in;
+      }
+      &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #fff;
+        transition: .4s ease-in-out;
+        z-index: -1;
+        border-radius: 6px;
+      }
+      &:hover::before{
+        background-color: #000;
+        width: 100%;
+      }
+      &:hover{
+        color: white;
       }
     }
   }

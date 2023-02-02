@@ -109,6 +109,12 @@
     }
     .menu_right {
       width: 45%;
+      video{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 6px;
+      }
       .menuright_control {
         display: flex;
         justify-content: space-between;

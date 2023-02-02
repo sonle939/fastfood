@@ -2,14 +2,14 @@ import Header from "../components/Header";
 import React, { useState } from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { Link } from "react-router-dom";
-import categoryimg from "../assets/categoryimg.jpg"
+import video1 from "../assets/video/video2.mp4";
 import Breadcrum from "../components/Breadcrum";
 import funituredata from "../data/funiture";
 import ScrollToTop from "react-scroll-to-top";
 import Pagination from "../components/Pagination";
 import Footer from '../components/Footer';
-
-function Menu() {
+import { motion } from 'framer-motion';
+function Menu({handleAddToCart}) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(9);
   const [tab, setTab] = useState(funituredata);
@@ -20,7 +20,11 @@ function Menu() {
   const [actie, setActive] = useState(true);
 
   return (
-    <div className="menu">
+    <motion.div className="menu"
+    inital={{opacity: 0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    >
       <HelmetProvider>
         <Helmet>
           <title>Menu</title>
@@ -112,7 +116,9 @@ function Menu() {
             </div>
           </div>
           <div className="menu_right">
-            <img src={categoryimg} />
+            <video autoPlay loop muted>
+              <source src={video1} />
+            </video>
             <div className="menuright_control">
               <div className="right_icon">
                 <div className={actie ? "righticon_item" : "righticon_item active"} onClick={() => setActive(true)}>
@@ -138,7 +144,7 @@ function Menu() {
                 <div className={actie ? "menuright_item" : "menuright_item active"} key={item.id}>
                   <img src={item.image} />
                   <div className="menuright_des">
-                    <img src={item.rating} className={actie ? "image active":"image"}/>
+                    <img src={item.rating} className={actie ? "image active" : "image"} />
                     <h3>{item.title}</h3>
                     <p>${item.price}</p>
                     <div className={actie ? "hide" : "hide active"}>
@@ -151,9 +157,9 @@ function Menu() {
                       <button><i className="fa fa-heart-o" aria-hidden="true"></i></button>
                     </div>
                   </div>
-                  <div className={actie ? "menuright_item_overlay active": "menuright_item_overlay"}>
+                  <div className={actie ? "menuright_item_overlay active" : "menuright_item_overlay"}>
                     <div className="overlay_control">
-                      <Link className="control_item">
+                      <Link className="control_item" onClick={handleAddToCart}>
                         <i className="fa fa-cart-plus" aria-hidden="true"></i>
                       </Link>
                       <Link className="control_item">
@@ -176,7 +182,7 @@ function Menu() {
         </div>
         <Footer />
       </HelmetProvider>
-    </div>
+    </motion.div>
   )
 }
 

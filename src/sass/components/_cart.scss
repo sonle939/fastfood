@@ -1,0 +1,15 @@
+.cart{
+    margin-top: 250px;
+    &_container{
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        text-align: left;
+        align-items: center;
+        flex-direction: column;
+        background-color: #dadada;
+        h2{
+          
+        }
+    }
+}

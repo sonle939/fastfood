@@ -5,6 +5,7 @@ import ScrollToTop from 'react-scroll-to-top';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import funituredata from "../data/funiture";
+import { motion } from 'framer-motion';
 function Details() {
   const { id } = useParams();
   const [tab, setTab] = useState(true);
@@ -26,7 +27,11 @@ function Details() {
     //   </div>
     //  ))}
   return (
-    <div className='details'>
+    <motion.div className='details'
+    inital={{opacity: 0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    >
       <HelmetProvider>
         <Helmet>
           <title>Home</title>
@@ -114,7 +119,7 @@ function Details() {
         </div>
         <Footer/>
       </HelmetProvider>
-    </div>
+    </motion.div>
   )
 }
 

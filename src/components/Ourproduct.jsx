@@ -76,7 +76,7 @@ function Ourproduct() {
       </div>
       <div className='more'>
         <div className='more_item' data-aos="fade-up-right"
-        data-aos-offset="50 0">
+        data-aos-offset="420">
           <img src='https://i.pinimg.com/564x/1c/7b/cc/1c7bcc3ebb02ab5ae82a81205636fe73.jpg' />
           <div className='more_item-text'>
             <p>50% off all order</p>
@@ -85,7 +85,7 @@ function Ourproduct() {
           </div>
         </div>
         <div className='more_item' data-aos="fade-up-left"
-        data-aos-offset="500">
+        data-aos-offset="420">
           <img src='https://i.pinimg.com/736x/9d/27/b2/9d27b2f0d0fbf5aea36ca168487ff6a1.jpg' />
           <div className='more_item-text'>
             <p>50% off all order</p>
@@ -96,20 +96,24 @@ function Ourproduct() {
       </div>
       <div className='hot'>
         <div className='hot_control'>
-          <div className="hot_title">
+          <div className="hot_title" data-aos="fade-right" data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
             <h3>Our Products</h3>
             <div className='line'></div>
           </div>
-          <div className='hot_control_item'>
+          <div className='hot_control_item' data-aos="fade-down" data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
             <div onClick={() => { setTypeData(funituredata); setActive("all"); }} className={active === "all" ? "item_contol active" : "item_contol "}>All product</div>
             <div onClick={() => { filterData("newmod"); setActive("newmod"); }} className={active === "newmod" ? "item_contol active" : "item_contol "}>Latest product</div>
             <div onClick={() => { filterData("selling"); setActive("selling"); }} className={active === "selling" ? "item_contol active" : "item_contol "}>Top rating</div>
             <div onClick={() => { filterData("discount"); setActive("discount"); }} className={active === "discount" ? "item_contol active" : "item_contol"}>Best seller</div>
             <div className='animation_line line'></div>
           </div>
-          <Link to="/menu">go to menu<i className="fa fa-arrow-right" aria-hidden="true"></i></Link>
+          <Link to="/menu" data-aos="fade-left" data-aos-offset="300"
+          data-aos-easing="ease-in-sine">go to menu<i className="fa fa-arrow-right" aria-hidden="true"></i></Link>
         </div>
-        <div className='hot_wrapper'>
+        <div className='hot_wrapper' data-aos="fade-up" data-aos-offset="400"
+        data-aos-easing="easing">
           {typeData.map(item => (
             <div className='wrapper-item' key={item.id}>
               <img src={item.image} alt="" className='img_hover' />
@@ -142,7 +146,8 @@ function Ourproduct() {
         <div className='supplise_text'>
           <h2>We design digital products</h2>
           <i className="fa fa-cubes" aria-hidden="true"></i>
-          <p>
+          <p data-aos="fade-up" data-aos-offset="400"
+          data-aos-easing="easing">
             A house with beautiful interior design brings back aesthetic value
             and value for money. When your home is beautifully furnished, it
             will certainly appreciate more when you sell it. Besides,
