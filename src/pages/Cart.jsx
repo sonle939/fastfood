@@ -20,9 +20,10 @@ function Cart({ cart, handleAddToCart, handleRemoveFromCart, }) {
   }, [])
   return (
     <motion.div className='cart'
-      inital={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+    inital={{ y: "100%" }}
+    animate={{ y: "0%" }}
+    exit={{opacity:0}}
+    transition={{ duration: 0.5,ease: "linear" }}
     >
       <HelmetProvider>
         <Helmet>

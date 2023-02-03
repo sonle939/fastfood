@@ -39,7 +39,7 @@ function App() {
     });
   };
   return (
-    <AnimatePresence>
+    <AnimatePresence initial={false}>
       <Header cart={cart}/>
       <Routes location={location} key={location.pathname}>
         <Route path='/' element={<Home handleAddToCart={handleAddToCart}/>} />

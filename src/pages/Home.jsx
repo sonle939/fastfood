@@ -78,11 +78,16 @@ function Home({ handleAddToCart }) {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, [])
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const close = () => setModalOpen(false);
+  const open = () => setModalOpen(true);
   return (
     <motion.div className='home'
-      inital={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+    inital={{ y: "100%" }}
+    animate={{ y: "0%" }}
+    exit={{opacity:0}}
+    transition={{ duration: 0.5,ease: "easeOut" }}
     >
       <HelmetProvider>
         <Helmet>
@@ -108,9 +113,7 @@ function Home({ handleAddToCart }) {
             </div>
           </div>
           <div className='introduce_bottom'>
-            <div className='introduce_item' data-aos="fade-left"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine">
+            <div className='introduce_item'>
               <div className='introduce_image'>
                 <img src="https://i.pinimg.com/564x/1d/80/a9/1d80a93b5d30ae65b891d971429f28d5.jpg" />
                 <p>Combination of many unique styles</p>
@@ -118,8 +121,7 @@ function Home({ handleAddToCart }) {
               </div>
               <p>Combination of many unique styles</p>
             </div>
-            <div className='introduce_item' data-aos="fade-up"
-              data-aos-duration="3000">
+            <div className='introduce_item'>
               <div className='introduce_image'>
                 <img src="https://i.pinimg.com/564x/2e/0f/79/2e0f798bd11e40ed4699dc6839eb92f5.jpg" />
                 <p>Bringing innovation to each product</p>
@@ -127,9 +129,7 @@ function Home({ handleAddToCart }) {
               </div>
               <p>Bringing innovation to each product</p>
             </div>
-            <div className='introduce_item' data-aos="fade-right"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine">
+            <div className='introduce_item'>
               <div className='introduce_image'>
                 <img src="https://i.pinimg.com/564x/ca/32/ef/ca32efd88d1d0dd763fa6dfdeb472116.jpg" />
                 <p>Always ensure a high quality</p>
@@ -144,9 +144,7 @@ function Home({ handleAddToCart }) {
             <h1>salient features</h1>
             <i className="fa fa-cubes" aria-hidden="true"></i>
           </div>
-          <div className='about_outstanding' data-aos="fade-up"
-            data-aos-easing="easing"
-            data-aos-duration="1500">
+          <div className='about_outstanding'>
             {
               databout.map((item) => (
                 <div className='about_item' key={item.id}>
@@ -156,7 +154,14 @@ function Home({ handleAddToCart }) {
                   <div className='about_note'>
                     <h2>{item.title}</h2>
                     <p>{item.description}</p>
-                    <button>Learn More</button>
+                    <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.5,ease: "easeIn" }}
+                    onClick={() => (modalOpen ? close() : open())}
+                    >
+                    Learn More
+                    </motion.button>
                   </div>
                 </div>
               ))
@@ -165,9 +170,7 @@ function Home({ handleAddToCart }) {
         </div>
         <div className='sell'>
           <div className='sell_category'>
-            <div className='category_text'
-              data-aos="fade-right"
-              data-aos-offset="300">
+            <div className='category_text'>
               <h3>Shop by category</h3>
               <div className='line'></div>
               <div className='category_amount'>
@@ -179,9 +182,7 @@ function Home({ handleAddToCart }) {
             <div className='category_image'>
               {
                 dataCategory.map(item => (
-                  <div className='category_item' key={item.id} data-aos="fade-left"
-                    data-aos-offset="300"
-                    data-aos-easing="ease-in-sine">
+                  <div className='category_item' key={item.id}>
                     <img src={item.image} />
                     <h3>{item.title}</h3>
                   </div>
@@ -190,8 +191,7 @@ function Home({ handleAddToCart }) {
             </div>
           </div>
           <div className='more'>
-            <div className='more_item' data-aos="fade-up-right"
-              data-aos-offset="420">
+            <div className='more_item'>
               <img src='https://i.pinimg.com/564x/1c/7b/cc/1c7bcc3ebb02ab5ae82a81205636fe73.jpg' />
               <div className='more_item-text'>
                 <p>50% off all order</p>
@@ -199,8 +199,7 @@ function Home({ handleAddToCart }) {
                 <button>Shop now</button>
               </div>
             </div>
-            <div className='more_item' data-aos="fade-up-left"
-              data-aos-offset="420">
+            <div className='more_item'>
               <img src='https://i.pinimg.com/736x/9d/27/b2/9d27b2f0d0fbf5aea36ca168487ff6a1.jpg' />
               <div className='more_item-text'>
                 <p>50% off all order</p>
@@ -211,24 +210,20 @@ function Home({ handleAddToCart }) {
           </div>
           <div className='hot'>
             <div className='hot_control'>
-              <div className="hot_title" data-aos="fade-right" data-aos-offset="300"
-                data-aos-easing="ease-in-sine">
+              <div className="hot_title">
                 <h3>Our Products</h3>
                 <div className='line'></div>
               </div>
-              <div className='hot_control_item' data-aos="fade-down" data-aos-offset="300"
-                data-aos-easing="ease-in-sine">
+              <div className='hot_control_item'>
                 <div onClick={() => { setTypeData(funituredata); setActive("all"); }} className={active === "all" ? "item_contol active" : "item_contol "}>All product</div>
                 <div onClick={() => { filterData("newmod"); setActive("newmod"); }} className={active === "newmod" ? "item_contol active" : "item_contol "}>Latest product</div>
                 <div onClick={() => { filterData("selling"); setActive("selling"); }} className={active === "selling" ? "item_contol active" : "item_contol "}>Top rating</div>
                 <div onClick={() => { filterData("discount"); setActive("discount"); }} className={active === "discount" ? "item_contol active" : "item_contol"}>Best seller</div>
                 <div className='animation_line line'></div>
               </div>
-              <Link to="/menu" data-aos="fade-left" data-aos-offset="300"
-                data-aos-easing="ease-in-sine">go to menu<i className="fa fa-arrow-right" aria-hidden="true"></i></Link>
+              <Link to="/menu">go to menu<i className="fa fa-arrow-right" aria-hidden="true"></i></Link>
             </div>
-            <div className='hot_wrapper' data-aos="fade-up" data-aos-offset="400"
-              data-aos-easing="easing">
+            <div className='hot_wrapper'>
               {typeData.map(item => (
                 <div className='wrapper-item' key={item.id}>
                   <img src={item.image} alt="" className='img_hover' />
@@ -261,8 +256,7 @@ function Home({ handleAddToCart }) {
             <div className='supplise_text'>
               <h2>We design digital products</h2>
               <i className="fa fa-cubes" aria-hidden="true"></i>
-              <p data-aos="fade-up" data-aos-offset="400"
-                data-aos-easing="easing">
+              <p>
                 A house with beautiful interior design brings back aesthetic value
                 and value for money. When your home is beautifully furnished, it
                 will certainly appreciate more when you sell it. Besides,

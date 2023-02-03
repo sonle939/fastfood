@@ -28,9 +28,10 @@ function Details() {
     //  ))}
   return (
     <motion.div className='details'
-    inital={{opacity: 0}}
-    animate={{opacity:1}}
+    inital={{ y: "100%" }}
+    animate={{ y: "0%" }}
     exit={{opacity:0}}
+    transition={{ duration: 0.5,ease: "easeOut" }}
     >
       <HelmetProvider>
         <Helmet>

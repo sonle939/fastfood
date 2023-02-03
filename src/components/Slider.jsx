@@ -6,6 +6,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import { Link } from 'react-router-dom';
+import {container,item} from "../components/Animation";
+import { motion } from 'framer-motion';
 function Slider() {
 
     return (
@@ -31,17 +33,24 @@ function Slider() {
                 modules={[Autoplay, Navigation, Pagination, Mousewheel, Keyboard]}
                 className="mySwiper"
             >
-                {dataSlider.map((item) => (
-                    <SwiperSlide key={item.id}>
+                {dataSlider.map((item1) => (
+                    <SwiperSlide key={item1.id}>
                         <video autoPlay loop muted>
-                            <source src={item.video} />
+                            <source src={item1.video} />
                         </video>
-                        <div className='slider_text'>
-                            <h1>{item.title}</h1>
-                            <h4>{item.descriiption}</h4>
-                            <p>{item.note}</p>
+                        <motion.div className='slider_text' 
+                        variants={container}
+                        initial="hidden"
+                        animate="show"
+                        >
+                            <motion.h1  animate={{ y: 0 }}
+                            initial={{ y: "100%" }}
+                            transition={{ delay: 0.5, duration: 0.5 }}
+                            >{item1.title}</motion.h1>
+                            <motion.h4 variants={item}>{item1.descriiption}</motion.h4>
+                            <motion.p variants={item}>{item1.note}</motion.p>
                             <Link>View now</Link>
-                        </div>
+                        </motion.div>
                     </SwiperSlide>
                 ))}
                 <div className='swiper-button-prev prev'>
