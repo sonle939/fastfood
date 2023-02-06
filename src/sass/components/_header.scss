@@ -132,28 +132,54 @@
     height: 100%;
     opacity: 1;
     @include flex(center, center);
+    flex-direction: column;
     background-color: rgba(0, 0, 0, 0.97);
     animation: aniheight .5s linear;
-    .overlay_input {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 50%;
-      border-bottom: 1px solid #fff;
-      padding: 5px;
-      z-index: 99999;
-      input {
-        padding: 5px;
-        background-color: transparent;
+    .search_container{
+      width: 100%;
+      @include flex(center,center);
+      flex-direction: column;
+      h2{
+        font-size: 40px;
+        letter-spacing: 1px;
         color: #fff;
-        border: none;
-        text-transform: capitalize;
-        font-style: italic;
       }
-      i {
-        font-size: 20px;
-        color: $background_white;
+      .input_wrapper{
+        background-color: $background_white;
+        border-radius: 25px;
+        width: 40%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        margin: 30px 0;
+        i{
+          font-size: 20px;
+          margin:0 20px;
+        }
+        input{
+          height: 100%;
+          width: 60%;
+          border: none;
+          padding: 10px;
+          font-size: 15px;
+          letter-spacing: 1px;
+          color: #78716c;
+          font-style: italic;
+        }
       }
+      .suggest{
+        @include flex(center,center);
+        &_item{
+          padding: 5px;
+          border-radius: 20px;
+          color: #fff;
+          border: 1px solid #fff;
+          background-color: transparent;
+          margin: 0 10px;
+          font-size: 20px;
+        }
+      }
+
     }
     &.active { 
       position: fixed;
@@ -191,6 +217,34 @@
       to{
         opacity: 1;
         height: 100%;
+      }
+    } 
+    .content_search{
+      margin-top: 30px;
+        color: $text_color;
+        width: 40%;
+        height: 0;
+        transition: height .5s linear;
+        border-radius: 25px;
+        background-color: $background_white;
+        overflow: scroll;
+        &::-webkit-scrollbar{
+          width: 0px;
+        }
+        &::-webkit-scrollbar-thumb{
+          background-color: $background_black;
+        }
+        &::-webkit-scrollbar-track{
+          color: $background_white;
+        }
+    }
+    .active{
+      height: 400px;
+      padding: 15px;
+    }
+    .list_product{
+      p{
+        color: #fff;
       }
     }
   }
