@@ -94,20 +94,15 @@ function Header({ cart }) {
                         <p className='suggest_item' onClick={() => setSearch('lamp')}>
                             Lamp
                         </p>
-                        <p className='suggest_item' onClick={() => setSearch('c lock')}>
+                        <p className='suggest_item' onClick={() => setSearch('clock')}>
                             Clock
                         </p>
                     </div>
                 </div>
                 <div className={search === "" ? "content_search" :"content_search active"}>
-                    {data.filter((item => {
-                        return item.title.toLowerCase().includes(search);
-                    })).map(item => (
-                        <div className='list_product'>
-                            {search === "" ? "" : (
-                                <p>{item.title}</p>
-                            )}
-                        </div>
+                    {data.filter((item => item.title.toLowerCase().includes(search)))
+                        .map(item => (
+                            <>{search === "" ? "" :(<p>{item.title}</p>)}</>
                     ))}
                 </div>
                 <div className='overlay-icon' onClick={() => setActive(!active)}>

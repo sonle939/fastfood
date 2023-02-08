@@ -46,7 +46,7 @@ function App() {
         <Route path='/cart' element={<Cart cart={cart} setCart={setCart} handleRemoveFromCart={handleRemoveFromCart}
           handleAddToCart={handleAddToCart} />} />
         <Route path='/menu' element={<Menu cart={cart} handleAddToCart={handleAddToCart}/>} />
-        <Route path='/details/:id' element={<Details handleRemoveFromCart={handleRemoveFromCart}
+        <Route path='/details/:id' element={<Details
         handleAddToCart={handleAddToCart}/>} />
       </Routes>
     </AnimatePresence>

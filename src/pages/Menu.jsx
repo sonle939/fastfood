@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+
 import React, { useState } from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { Link } from "react-router-dom";
@@ -10,74 +10,92 @@ import Pagination from "../components/Pagination";
 import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
 function Menu({ cart, handleAddToCart }) {
+  const initFilter = {
+    category: [],
+    manufacturer: [],
+    price: []
+  }
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(9);
+  const [postsPerPage, setPostPerPage] = useState(6);
   const [tab, setTab] = useState(funituredata);
 
   const paginate = pageNumber => setCurrentPage(pageNumber);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = tab.slice(indexOfFirstPost, indexOfLastPost);
-
   const [control, setControl] = useState(currentPosts);
   const [actie, setActive] = useState(true);
   const [arrange, setArrange] = useState(true);
-  // const [proname, setProname] = useState("ASC");
-  // const sortName = (col) => {
-  //   if (proname === "ASC") {
-  //     const sorted = control.sort((a, b) =>
-  //       a[col].toLowerCase() > b[col].toLowerCase() ? 1 : -1
-  //     );
-  //     setControl(sorted);
-  //     console.log(control)
-  //     setProname("DSC");
-  //   }
-  //   if (proname === "DSC") {
-  //     const sorted = [...control].sort((a, b) =>
-  //       a[col].toLowerCase() < b[col].toLowerCase() ? -1 : 1
-  //     );
-  //     setControl(sorted);
-  //     setProname("ASC");
-  //   }
-  // }
+
+  const [filter, setFilter] = useState(initFilter);
+  const [proname, setProname] = useState("ASC");
+  const sortName = (col) => {
+    if (proname === "ASC") {
+      const sorted = control.sort((a, b) =>
+        a[col].toLowerCase() > b[col].toLowerCase() ? 1 : -1
+      );
+      setControl(sorted);
+      console.log(control)
+      setProname("DSC");
+    }
+    if (proname === "DSC") {
+      const sorted = [...control].sort((a, b) =>
+        a[col].toLowerCase() < b[col].toLowerCase() ? -1 : 1
+      );
+      setControl(sorted);
+      setProname("ASC");
+    }
+  }
   const sortPrice = () => {
     if (arrange == true) {
-      const sorrt = control.sort((a, b) => {
+      const sorrt = [...tab].slice(indexOfFirstPost, indexOfLastPost).sort((a, b) => {
         return a.price > b.price ? 1 : -1;
       });
       setControl(sorrt);
-      console.log(control)
     } else if (arrange == false) {
-      const sorrt = control.sort((a, b) => {
+      const sorrt = [...tab].slice(indexOfFirstPost, indexOfLastPost).sort((a, b) => {
         return a.price < b.price ? 1 : -1;
       });
       setControl(sorrt);
-      console.log(control)
     }
   };
-  const filterType = (typepro) => {
-    const filteraa = tab.filter(item => item.manufacturer == typepro);
-    setControl(filteraa);
-    console.log(filteraa);
-  }
-  const filterProduct = (typepro) => {
-    const filteraa = tab.filter(item => item.category == typepro);
-    setControl(filteraa);
-    console.log(filteraa);
-  }
-  const filterPrice = (typepro) => {
-    if (typepro < 2500) {
-      const filteraa = tab.filter(item => item.price < typepro);
-      setControl(filteraa);
-    } else if (typepro > 2500) {
-      const filteraa = tab.filter(item => item.price > typepro);
-      setControl(filteraa);
+  const filterSelect = (type, checked, item) => {
+    if (checked) {
+      switch (type) {
+        case "manufacturer":
+          setFilter({ ...filter, manufacturer: [...filter.manufacturer, item.manufacturer] })
+          break
+        case "category":
+          setFilter({ ...filter, category: [...filter.category, item.category] })
+          break
+        case "price":
+          setFilter({ ...filter, price: [...filter.price, item.price] })
+          break
+        default:
+      }
+    } else {
+      switch (type) {
+        case "manufacturer":
+          const newmanufacturer = filter.manufacturer.filter(e => e !== item.manufacturer)
+          setFilter({ ...filter, manufacturer: newmanufacturer })
+          break
+        case "category":
+          const newCategory = filter.color.filter(e => e !== item.color)
+          setFilter({ ...filter, category: newCategory })
+          break
+        case "price":
+          const newPrice = filter.price.filter(e => e !== item.price)
+          setFilter({ ...filter, size: newPrice })
+          break
+        default:
+      }
     }
   }
+  const clearFilter = () => setFilter(initFilter)
   return (
     <motion.div className="menu"
-      inital={{ y: "100%" }}
-      animate={{ y: "0%" }}
+      inital={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
@@ -97,19 +115,19 @@ function Menu({ cart, handleAddToCart }) {
               <div className="menu_wrapper">
                 <h3>Manufacturer</h3>
                 <ul>
-                  <li onClick={() => filterType("Calvin Klein")}>
+                  <li>
                     Calvin Klein
                     <p>({funituredata.filter(item => item.manufacturer == "Calvin Klein").length})</p>
                   </li>
-                  <li onClick={() => filterType("Diesel")}>
+                  <li >
                     Diesel
                     <p >({funituredata.filter(item => item.manufacturer == "Diesel").length})</p>
                   </li>
-                  <li onClick={() => filterType("Polo")}>
+                  <li >
                     Polo
                     <p>({funituredata.filter(item => item.manufacturer == "Polo").length})</p>
                   </li>
-                  <li onClick={() => filterType("Tommy Hifiger")}>
+                  <li >
                     Tommy Hilfiger
                     <p >({funituredata.filter(item => item.manufacturer == "Tommy Hifiger").length})</p>
                   </li>
@@ -118,23 +136,23 @@ function Menu({ cart, handleAddToCart }) {
               <div className="menu_wrapper">
                 <h3>Category</h3>
                 <ul>
-                  <li onClick={() => filterProduct("chair")}>
+                  <li >
                     Chair
                     <p>({funituredata.filter(item => item.category == "chair").length})</p>
                   </li>
-                  <li onClick={() => filterProduct("table")}>
+                  <li >
                     Table
                     <p>({funituredata.filter(item => item.category == "table").length})</p>
                   </li>
-                  <li onClick={() => filterProduct("lamp")}>
+                  <li >
                     Clamp
                     <p>({funituredata.filter(item => item.category == "lamp").length})</p>
                   </li>
-                  <li onClick={() => filterProduct("mirror")}>
+                  <li >
                     Mirror
                     <p>({funituredata.filter(item => item.category == "mirror").length})</p>
                   </li>
-                  <li onClick={() => filterProduct("clock")}>
+                  <li >
                     Clock
                     <p>({funituredata.filter(item => item.category == "clock").length})</p>
                   </li>
@@ -143,11 +161,11 @@ function Menu({ cart, handleAddToCart }) {
               <div className="menu_wrapper">
                 <h3>Price</h3>
                 <ul>
-                  <li onClick={() => filterPrice(2000)}>
+                  <li >
                     $0,00 - $2,000
                     <p>({funituredata.filter(item => item.price < 2000).length})</p>
                   </li>
-                  <li onClick={() => filterPrice(2510)}>
+                  <li >
                     $2000 And Above
                     <p>({funituredata.filter(item => item.price > 2510).length})</p>
                   </li>
@@ -184,13 +202,21 @@ function Menu({ cart, handleAddToCart }) {
                 </div>
               </div>
               <div className="right_sort">
-                <h3>Sort by: </h3>
-                <select name="sortby" id="sortby">
-                  <option value="default">Default</option>
-                  <option value="Product Name">Product Name</option>
-                  <option value="Price">Price</option>
-                  <option value="rating">Rating</option>
-                </select>
+                <div className="sort_page">
+                  <h3>Sort by: </h3>
+                  <select name="sortby" id="sortby" onChange={(e) => setPostPerPage(e.target.value)}>
+                    <option value="0">6</option>
+                    <option value="9">9</option>
+                    <option value="12">12</option>
+                  </select>
+                </div>
+                <div className="sort_title">
+                  <h3>Sort by: </h3>
+                  <select name="sortby" id="sortby" >
+                    <option value="default">Default</option>
+                    <option value="Product Name">Product Name</option>
+                  </select>
+                </div>
                 {arrange == true ?
                   (<i className="fa fa-arrow-down" aria-hidden="true"
                     onClick={() => { sortPrice(); setArrange(false) }}></i>) :
@@ -200,7 +226,7 @@ function Menu({ cart, handleAddToCart }) {
               </div>
             </div>
             <div className="menuright_list">
-              {control.map(item => (
+              {currentPosts.map(item => (
                 <div className={actie ? "menuright_item" : "menuright_item active"} key={item.id}>
                   <img src={item.image} />
                   <div className="menuright_des">
@@ -208,14 +234,15 @@ function Menu({ cart, handleAddToCart }) {
                     <h3>{item.title}</h3>
                     <p>${item.price}</p>
                     <div className={actie ? "hide" : "hide active"}>
-                      <img src={item.rating} />
-                      <p>{item.customerreview.filter(item => item.description).length} review</p>
+                       <img src={item.rating} />
+                      <p>{item.customerreview.filter(item1 => item1.text).length} review</p>
                     </div>
                     <h5 className={actie ? "hide" : "hide active"}>{item.description}</h5>
                     <div className={actie ? "hide" : "hide active"}>
                       <button onClick={() => handleAddToCart(item)}>
-                        <i className="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
-                      <button><i className="fa fa-eye" aria-hidden="true"></i></button>
+                        <i className="fa fa-cart-plus" aria-hidden="true"></i> Add to cart
+                        </button>
+                      <Link to={`/details/${item.id}`}><i className="fa fa-eye" aria-hidden="true"></i></Link>
                     </div>
                   </div>
                   <div className={actie ? "menuright_item_overlay active" : "menuright_item_overlay"}>

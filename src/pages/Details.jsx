@@ -3,35 +3,30 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Link, useParams } from 'react-router-dom'
 import ScrollToTop from 'react-scroll-to-top';
 import Footer from '../components/Footer';
-import Header from '../components/Header';
 import funituredata from "../data/funiture";
 import { motion } from 'framer-motion';
-function Details() {
+function Details({ handleAddToCart }) {
   const { id } = useParams();
   const [tab, setTab] = useState(true);
   const [count, setCount] = useState(1);
-  const [data,setData] = useState([]);
-    const filterData = () => {
-      const filteritem = funituredata.filter((itemdata) => {
-        return itemdata.id == id;
-      })
-      setData(filteritem);
-    }
-    useEffect(()=>{
-      filterData();
-    },[])
-    console.log(data.includes("category"))
-    // {funituredata.map(item=>(
-    //   <div className='related_item'>
-    //       <h1>{item.price}</h1>
-    //   </div>
-    //  ))}
+  const [data, setData] = useState([]);
+  const filterData = () => {
+    const filteritem = funituredata.filter((itemdata) => {
+      return itemdata.id == id;
+    })
+    setData(filteritem);
+
+  }
+  useEffect(() => {
+    filterData();
+  }, [])
+  const valueKey = funituredata.filter(item => item.id == id)[0].category;
   return (
     <motion.div className='details'
-    inital={{ y: "100%" }}
-    animate={{ y: "0%" }}
-    exit={{opacity:0}}
-    transition={{ duration: 0.5,ease: "easeOut" }}
+      inital={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <HelmetProvider>
         <Helmet>
@@ -71,7 +66,7 @@ function Details() {
                   {item1.description}
                 </div>
                 <div className='details_btn'>
-                  <button><i className="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                  <button onClick={() => handleAddToCart(item1)}><i className="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
                   <button><i className="fa fa-heart-o" aria-hidden="true"></i></button>
                 </div>
               </div>
@@ -114,10 +109,14 @@ function Details() {
             </div>
           </div>
           <div className='related_bottom'>
- 
+            {funituredata.filter(item => item.category == valueKey).map(item1 => (
+              <div className='category_item'>
+                <h2>{item1.title}</h2>
+              </div>
+            ))}
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </HelmetProvider>
     </motion.div>
   )

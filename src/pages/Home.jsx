@@ -75,17 +75,14 @@ function Home({ handleAddToCart }) {
       description: "If the purchase is damaged because the manufacturer is allowed exchange",
     }
   ]
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, [])
   const [modalOpen, setModalOpen] = useState(false);
 
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
   return (
     <motion.div className='home'
-    inital={{ y: "100%" }}
-    animate={{ y: "0%" }}
+    inital={{opacity:0}}
+    animate={{opacity:1}}
     exit={{opacity:0}}
     transition={{ duration: 0.5,ease: "easeOut" }}
     >

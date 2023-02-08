@@ -58,6 +58,8 @@
           font-weight: 400;
           font-style: italic;
           color: #a2a2a2;
+          &.active {
+          }
         }
       }
       .rated_category {
@@ -109,7 +111,7 @@
     }
     .menu_right {
       width: 45%;
-      video{
+      video {
         width: 100%;
         height: 300px;
         object-fit: cover;
@@ -136,9 +138,9 @@
               font-size: 17px;
               color: #434343;
             }
-            &.active{
+            &.active {
               border: 1px solid #ebebeb;
-              i{
+              i {
                 color: #ebebeb;
               }
             }
@@ -146,29 +148,58 @@
         }
         .right_sort {
           @include flex(center, center);
-          h3 {
-            font-style: italic;
-            font-size: 19px;
-            display: inline-block;
-            color: #3e3e3e;
-            font-weight: 400;
-            padding: 0 14px 0 0;
-            text-transform: capitalize;
+          .sort_page {
+            margin-right: 10px;
+            h3 {
+              font-style: italic;
+              font-size: 17px;
+              display: inline-block;
+              color: #3e3e3e;
+              font-weight: 400;
+              padding: 0 14px 0 0;
+              text-transform: capitalize;
+            }
+            select {
+              font-style: italic;
+              border-color: #e1e1e1;
+              border-radius: 25px;
+              padding: 4px 10px 5px 10px !important;
+              margin: 0 5px;
+              height: 31px;
+              min-width: 100px;
+              cursor: pointer;
+              color: #898888;
+              font-size: 15px;
+              font-weight: 400;
+              text-transform: capitalize;
+              vertical-align: initial;
+            }
           }
-          select {
-            font-style: italic;
-            border-color: #e1e1e1;
-            border-radius: 25px;
-            padding: 4px 10px 5px 10px !important;
-            margin: 0 5px;
-            height: 31px;
-            min-width: 100px;
-            cursor: pointer;
-            color: #898888;
-            font-size: 15px;
-            font-weight: 400;
-            text-transform: capitalize;
-            vertical-align: initial;
+          .sort_title {
+            h3 {
+              font-style: italic;
+              font-size: 17px;
+              display: inline-block;
+              color: #3e3e3e;
+              font-weight: 400;
+              padding: 0 14px 0 0;
+              text-transform: capitalize;
+            }
+            select {
+              font-style: italic;
+              border-color: #e1e1e1;
+              border-radius: 25px;
+              padding: 4px 10px 5px 10px !important;
+              margin: 0 5px;
+              height: 31px;
+              min-width: 100px;
+              cursor: pointer;
+              color: #898888;
+              font-size: 15px;
+              font-weight: 400;
+              text-transform: capitalize;
+              vertical-align: initial;
+            }
           }
           i {
             color: #898888;
@@ -176,7 +207,7 @@
             margin: 0 5px;
             display: flex;
           }
-          .active{
+          .active {
             display: none;
           }
         }
@@ -211,12 +242,13 @@
               display: flex;
               align-items: center;
             }
-            .image{
+            .image {
               width: 80px;
               height: 30px;
               object-fit: cover;
-            display: none;
-            }.active{
+              display: none;
+            }
+            .active {
               display: flex;
               align-items: center;
               justify-content: flex-start;
@@ -283,50 +315,54 @@
                 font-size: 18px;
                 border-radius: 40px;
                 margin: 20px 10px;
-                i{
+                i {
                   margin-right: 10px;
                 }
-                &:nth-child(2) {
-                  border-radius: 50%;
-                  width: 50px;
-                  i{
-                    margin-right: 0;
-                  }
-                }
+              }
+              a {
+                @include flex(center, center);
+                background: #ebebeb;
+                color: black;
+                height: 50px;
+                width: 50px;
+                font-size: 18px;
+                border-radius: 40px;
+                margin: 20px 10px;
               }
             }
           }
-          .menuright_item_overlay{
+          .menuright_item_overlay {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             height: 83%;
-            
-            @include flex(center,center);
-            transition: all .5s linear;
+
+            @include flex(center, center);
+            transition: all 0.5s linear;
             transform: translateY(50px);
             opacity: 0;
             display: none;
-            .overlay_control{
-              @include flex(center,center);
-              .control_item{
-                  height: 45px;
-                  width: 45px;
-                  @include flex(center,center);
-                  border-radius: 50%;
-                  background-color: white;
-                  margin: 0 10px;
-                  i{
-                    color: $text_color;
-                    font-size: 19px;
-                  }
+            .overlay_control {
+              @include flex(center, center);
+              .control_item {
+                height: 45px;
+                width: 45px;
+                @include flex(center, center);
+                border-radius: 50%;
+                background-color: white;
+                margin: 0 10px;
+                i {
+                  color: $text_color;
+                  font-size: 19px;
                 }
+              }
             }
-          }.active{
-            @include flex(center,center);
           }
-          &:hover .menuright_item_overlay{
+          .active {
+            @include flex(center, center);
+          }
+          &:hover .menuright_item_overlay {
             opacity: 1;
             transform: translateY(0);
           }
