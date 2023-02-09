@@ -6,7 +6,6 @@ import funituredata from '../data/funiture';
 function Header({ cart }) {
     const [fix, setFix] = useState(false);
     const [data, setData] = useState(funituredata);
-    const [input, setInput] = useState(true);
     const [active, setActive] = useState(true);
     const [search, setSearch] = useState('');
     const suggest = [
@@ -69,41 +68,29 @@ function Header({ cart }) {
                 <li><Link to="/aboutus" data-replace="About us"><span>About us</span></Link></li>
             </ul>
             <div className={active ? "overlay_search active" : "overlay_search"} >
-                <div className='search_container'>
-                    <h2>We can help you find ?</h2>
-                    <div className="input_wrapper">
+                <div className="input_wrapper">
+                    <input type="text"
+                        onChange={(e) => setSearch(e.target.value)}
+                        placeholder='Search entrie store here'
+                        name="title"
+                        value={search}
+                    />
                     <i className="fa fa-search" aria-hidden="true"></i>
-                        <input type="text"
-                            onChange={(e) => setSearch(e.target.value)}
-                            placeholder='Search entrie store here'
-                            name="title"
-                            value={search}
-                            onClick={()=>setInput(!input)}
-                        />
-                    </div> 
-                    <div className='suggest'>
-                        <p className='suggest_item' onClick={() => setSearch('table')}>
-                            Table
-                        </p>
-                        <p className='suggest_item' onClick={() => setSearch('chair')}>
-                            Chair
-                        </p>
-                        <p className='suggest_item' onClick={() => setSearch('mirror')}>
-                            Mirror
-                        </p>
-                        <p className='suggest_item' onClick={() => setSearch('lamp')}>
-                            Lamp
-                        </p>
-                        <p className='suggest_item' onClick={() => setSearch('clock')}>
-                            Clock
-                        </p>
-                    </div>
                 </div>
-                <div className={search === "" ? "content_search" :"content_search active"}>
+                <div className="content_search">
                     {data.filter((item => item.title.toLowerCase().includes(search)))
                         .map(item => (
-                            <>{search === "" ? "" :(<p>{item.title}</p>)}</>
-                    ))}
+                            <>
+                                {search === "" ? "" :
+                                    (<a href={`/details/${item.id}`} className='sear_content'>
+                                        <img src={item.image}/>
+                                        <div className='sear_text'>
+                                            <h3>{item.title}</h3>
+                                            <p>$ {item.price}</p>
+                                        </div>
+                                    </a>)}
+                            </>
+                        ))}
                 </div>
                 <div className='overlay-icon' onClick={() => setActive(!active)}>
                     <i className="fa fa-times-circle" aria-hidden="true"></i>

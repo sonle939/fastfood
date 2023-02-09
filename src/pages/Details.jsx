@@ -109,11 +109,31 @@ function Details({ handleAddToCart }) {
             </div>
           </div>
           <div className='related_bottom'>
-            {funituredata.filter(item => item.category == valueKey).map(item1 => (
-              <div className='category_item'>
-                <h2>{item1.title}</h2>
+            {funituredata.filter(item => item.category == valueKey).slice(0, 4).map(item1 => (
+              <div className='related_item' key={item1.id}>
+                <div className='related_image'>
+                  <img src={item1.image} className="image" />
+                </div>
+                <div className='related_text'>
+                  <img src={item1.rating} />
+                  <h3>{item1.title}</h3>
+                  <p>${item1.price}</p>
+                </div>
+                <div className='overlay_control'>
+                  <Link className="control_item">
+                    <i onClick={() => handleAddToCart(item1)}
+                      className="fa fa-cart-plus" aria-hidden="true"></i>
+                  </Link>
+                  <Link className="control_item">
+                    <i className="fa fa-heart-o" aria-hidden="true"></i>
+                  </Link>
+                  <Link className="control_item" to={`/details/${item1.id}`}>
+                    <i className="fa fa-eye" aria-hidden="true"></i>
+                  </Link>
+                </div>
               </div>
             ))}
+
           </div>
         </div>
         <Footer />

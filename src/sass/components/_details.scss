@@ -173,58 +173,58 @@
     margin-top: 50px;
     margin-bottom: 30px;
     .tabs_control {
-   display: flex;
-   justify-content: flex-start;
+      display: flex;
+      justify-content: flex-start;
       margin-bottom: 30px;
       .tabs_item {
         font-size: 24px;
         text-transform: uppercase;
         color: #484848;
-        letter-spacing:1px ;
+        letter-spacing: 1px;
         margin: 0 20px;
         font-weight: bold;
-      }.active{
+      }
+      .active {
         border-bottom: 3px solid #484848;
       }
-
     }
-    .tab_content{
+    .tab_content {
       width: 100%;
       height: auto;
-      .description_text{
+      .description_text {
         width: 80%;
         line-height: 24px;
         letter-spacing: 1px;
         font-style: italic;
       }
-      .customer_list{
+      .customer_list {
         display: flex;
         flex-direction: column;
         padding: 10px;
-        .customer_item{
+        .customer_item {
           display: flex;
           align-items: center;
           margin: 18px 0;
-          img{
+          img {
             border-radius: 50%;
             object-fit: cover;
             width: 80px;
             height: 80px;
           }
-          .customer_text{
+          .customer_text {
             margin-left: 20px;
-            h2{
+            h2 {
               font-size: 19px;
               letter-spacing: 1px;
               font-weight: 400px;
             }
-            img{
+            img {
               width: 60px;
               height: 40px;
               object-fit: cover;
               margin-top: -8px;
             }
-            p{
+            p {
               line-height: 24px;
               letter-spacing: 1px;
               font-style: italic;
@@ -236,27 +236,27 @@
     }
   }
 
-  .related{
+  .related {
     @include flex(center, center);
     flex-direction: column;
     margin-bottom: 50px;
-    &_top{
+    &_top {
       @include flex(center, center);
       flex-direction: column;
       margin-bottom: 30px;
-      h2{
+      h2 {
         color: #333;
         letter-spacing: 1px;
         font-weight: bold;
         margin-bottom: 20px;
       }
-      .line{
+      .line {
         position: relative;
         height: 3px;
         width: 400px;
         border-radius: 12px;
         background-color: #e1e1e1;
-        &_icon{
+        &_icon {
           position: absolute;
           top: 50%;
           left: 45%;
@@ -267,8 +267,72 @@
           border-radius: 50%;
           background-color: white;
           z-index: 99;
-          i{
+          i {
             color: #e1e1e1;
+          }
+        }
+      }
+    }
+    &_bottom {
+      @include flex(center, center);
+      margin-top: 20px;
+      .related_item {
+        height: 350px;
+        width: 300px;
+        @include flex(center, center);
+        flex-direction: column;
+        border-radius: 6px;
+        padding: 10px;
+        cursor: pointer;
+        transition: all 0.5s ease-in;
+        position: relative;
+        .related_image {
+          width: 250px;
+          height: 250px;
+          @include flex(center, center);
+           overflow: hidden;
+           border-radius: 6px;
+          .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+            transition: all 0.5s linear;
+          }
+        }
+
+        .related_text {
+          text-align: center;
+          user-select: none;
+          img {
+            width: 80px;
+            height: 30px;
+            object-fit: cover;
+          }
+        }
+        &:hover .image {
+          transform: scale(1.1);
+          filter: blur(4px);
+        }
+        &:hover .overlay_control {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .overlay_control {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          transform: translateY(50px);
+          opacity: 0;
+          transition: all 0.5s ease-in;
+          .control_item {
+            height: 40px;
+            width: 40px;
+            @include flex(center, center);
+            color: black;
+            border-radius: 50%;
+            background-color: #fff;
+            margin: 0 8px;
           }
         }
       }
