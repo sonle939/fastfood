@@ -372,20 +372,47 @@
         @include flex(center, center);
         margin-top: 20px;
         li {
-          margin: 8px;
+           margin: 8px;
           .page_link {
-            width: 37px;
-            height: 37px;
-            border-radius: 50%;
-            @include flex(center, center);
-            background-color: #ccc;
             color: #fff;
             font-weight: 700;
             font-size: 16px;
-            &.active {
-              background-color: #434343;
-              color: #a2a2a2;
+            width: 37px;
+            height: 37px;
+            border-radius: 12px;
+            @include flex(center, center);
+            background-color: #ccc;
+            transition: all .5s ease-in;
+            &.active{
+              background-color: #111;
             }
+            &:hover{
+              background-color: #111;
+              transform: scale(1.1);
+            }
+          }
+          i{
+            color: #fff;
+            font-weight: 700; 
+            font-size: 16px;
+            width: 37px;
+            height: 37px;
+            border-radius: 12px;
+            @include flex(center, center);
+            background-color: #ccc;
+            transition: all .5s ease-in;
+            &:hover{
+              background-color: #111;
+              transform: scale(1.1);
+            }
+          }
+          & > .fa-chevron-right{
+            background-color: #111;
+          }
+          & > .fa-chevron-left{
+            background-color: #fff;
+            border: 1px solid #111;
+            color: #898888;
           }
         }
       }

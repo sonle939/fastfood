@@ -10,10 +10,21 @@ import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
 import funituredata from '../data/funiture';
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function Home({ handleAddToCart }) {
   const [typeData, setTypeData] = useState(funituredata);
   const [active, setActive] = useState("all");
-
+  const notify = () => toast('👏🏿 The product was added to your cart! !', {
+    position: "top-right",
+    autoClose: 1500,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+  });
   const dataCategory = [
     {
       id: 1,
@@ -81,11 +92,23 @@ function Home({ handleAddToCart }) {
   const open = () => setModalOpen(true);
   return (
     <motion.div className='home'
-    inital={{opacity:0}}
-    animate={{opacity:1}}
-    exit={{opacity:0}}
-    transition={{ duration: 0.5,ease: "easeOut" }}
+      inital={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
     >
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
       <HelmetProvider>
         <Helmet>
           <title>Home</title>
@@ -152,12 +175,12 @@ function Home({ handleAddToCart }) {
                     <h2>{item.title}</h2>
                     <p>{item.description}</p>
                     <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    transition={{ duration: 0.5,ease: "easeIn" }}
-                    onClick={() => (modalOpen ? close() : open())}
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                      transition={{ duration: 0.5, ease: "easeIn" }}
+                      onClick={() => (modalOpen ? close() : open())}
                     >
-                    Learn More
+                      Learn More
                     </motion.button>
                   </div>
                 </div>
@@ -236,7 +259,7 @@ function Home({ handleAddToCart }) {
                         <i className="fa fa-eye" aria-hidden="true"></i>
                       </Link>
                       <Link className='control_item'>
-                        <i className="fa fa-cart-plus" aria-hidden="true" onClick={()=>handleAddToCart(item)}></i>
+                        <i className="fa fa-cart-plus" aria-hidden="true" onClick={() => {handleAddToCart(item);notify()}}></i>
                       </Link>
                     </div>
                   </div>

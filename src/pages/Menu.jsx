@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { Link } from "react-router-dom";
 import video1 from "../assets/video/video2.mp4";
@@ -9,12 +9,24 @@ import ScrollToTop from "react-scroll-to-top";
 import Pagination from "../components/Pagination";
 import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function Menu({ cart, handleAddToCart }) {
   const initFilter = {
     category: [],
     manufacturer: [],
     price: []
   }
+  const notify = () => toast('👏🏿 The product was added to your cart! !', {
+    position: "top-right",
+    autoClose: 1500,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    });
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostPerPage] = useState(6);
   const [tab, setTab] = useState(funituredata);
@@ -26,42 +38,26 @@ function Menu({ cart, handleAddToCart }) {
   const [control, setControl] = useState(currentPosts);
   const [actie, setActive] = useState(true);
   const [arrange, setArrange] = useState(true);
-
   const [filter, setFilter] = useState(initFilter);
-  const [proname, setProname] = useState("ASC");
-  const sortName = (col) => {
-    if (proname === "ASC") {
-      const sorted = control.sort((a, b) =>
-        a[col].toLowerCase() > b[col].toLowerCase() ? 1 : -1
-      );
-      setControl(sorted);
-      console.log(control)
-      setProname("DSC");
-    }
-    if (proname === "DSC") {
-      const sorted = [...control].sort((a, b) =>
-        a[col].toLowerCase() < b[col].toLowerCase() ? -1 : 1
-      );
-      setControl(sorted);
-      setProname("ASC");
-    }
-  }
   const sortPrice = () => {
     if (arrange == true) {
-      const sorrt = [...tab].slice(indexOfFirstPost, indexOfLastPost).sort((a, b) => {
+      const sorrt = tab.sort((a, b) => {
         return a.price > b.price ? 1 : -1;
-      });
+      }).slice(indexOfFirstPost,indexOfLastPost);
       setControl(sorrt);
     } else if (arrange == false) {
-      const sorrt = [...tab].slice(indexOfFirstPost, indexOfLastPost).sort((a, b) => {
+      const sorrt = tab.sort((a, b) => {
         return a.price < b.price ? 1 : -1;
-      });
+      }).slice(indexOfFirstPost,indexOfLastPost);
       setControl(sorrt);
     }
   };
+  useEffect((col)=>{
+      sortPrice();
+  },[currentPage,postsPerPage])
   const filterSelect = (type, checked, item) => {
     if (checked) {
-      switch (type) {
+      switch (type) { 
         case "manufacturer":
           setFilter({ ...filter, manufacturer: [...filter.manufacturer, item.manufacturer] })
           break
@@ -99,6 +95,18 @@ function Menu({ cart, handleAddToCart }) {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
+    <ToastContainer
+    position="top-right"
+    autoClose={5000}
+    hideProgressBar={false}
+    newestOnTop={false}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+    pauseOnHover
+    theme="colored"
+    />
       <HelmetProvider>
         <Helmet>
           <title>Menu</title>
@@ -204,7 +212,7 @@ function Menu({ cart, handleAddToCart }) {
               <div className="right_sort">
                 <div className="sort_page">
                   <h3>Sort by: </h3>
-                  <select name="sortby" id="sortby" onChange={(e) => setPostPerPage(e.target.value)}>
+                  <select name="sortby" id="sortby" onChange={(e)=> setPostPerPage(e.target.value)}>
                     <option value="0">6</option>
                     <option value="9">9</option>
                     <option value="12">12</option>
@@ -212,9 +220,9 @@ function Menu({ cart, handleAddToCart }) {
                 </div>
                 <div className="sort_title">
                   <h3>Sort by: </h3>
-                  <select name="sortby" id="sortby" >
+                  <select name="sortby" id="sortby">
                     <option value="default">Default</option>
-                    <option value="Product Name">Product Name</option>
+                    <option value="Product name">Product Name</option>
                   </select>
                 </div>
                 {arrange == true ?
@@ -226,7 +234,7 @@ function Menu({ cart, handleAddToCart }) {
               </div>
             </div>
             <div className="menuright_list">
-              {currentPosts.map(item => (
+              {control.map(item => (
                 <div className={actie ? "menuright_item" : "menuright_item active"} key={item.id}>
                   <img src={item.image} />
                   <div className="menuright_des">
@@ -239,7 +247,7 @@ function Menu({ cart, handleAddToCart }) {
                     </div>
                     <h5 className={actie ? "hide" : "hide active"}>{item.description}</h5>
                     <div className={actie ? "hide" : "hide active"}>
-                      <button onClick={() => handleAddToCart(item)}>
+                      <button onClick={() => {handleAddToCart(item);notify()}}>
                         <i className="fa fa-cart-plus" aria-hidden="true"></i> Add to cart
                         </button>
                       <Link to={`/details/${item.id}`}><i className="fa fa-eye" aria-hidden="true"></i></Link>
@@ -248,7 +256,7 @@ function Menu({ cart, handleAddToCart }) {
                   <div className={actie ? "menuright_item_overlay active" : "menuright_item_overlay"}>
                     <div className="overlay_control">
                       <Link className="control_item">
-                        <i onClick={() => handleAddToCart(item)}
+                        <i onClick={() => {handleAddToCart(item);notify()}}
                           className="fa fa-cart-plus" aria-hidden="true"></i>
                       </Link>
                       <Link className="control_item">
@@ -266,8 +274,10 @@ function Menu({ cart, handleAddToCart }) {
               postsPerPage={postsPerPage}
               totalPosts={tab.length}
               paginate={paginate}
+              setCurrentPage = {setCurrentPage}
+              currentPage = {currentPage}
             />
-          </div>
+          </div> 
         </div>
         <Footer />
       </HelmetProvider>
