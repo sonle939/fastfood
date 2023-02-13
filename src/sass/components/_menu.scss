@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 200px;
+  position: relative;
   .breadcrumb {
     display: flex;
     padding-left: 270px;
@@ -58,8 +59,95 @@
           font-weight: 400;
           font-style: italic;
           color: #a2a2a2;
-          &.active {
+          label {
+            display: block;
+            line-height: 40px;
+            cursor: pointer;
           }
+          input{
+            cursor: pointer;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            -o-appearance: none;
+            appearance: none;
+            position: relative;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            transition: all 0.15s ease-out 0s;
+            background: #dadada;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 0.5rem;
+            outline: none;
+            position: relative;
+            z-index: 10;
+            border-radius: 6px;
+            &:hover {
+              background: #111;
+            }
+            &:checked {
+              background: #555;
+            }
+            &:checked::before {
+              width: 20px;
+              height: 20px;
+              @include flex(center, center);
+              content: "o";
+              font-size: 12px;
+              font-weight: bold;
+              position: absolute;
+            }
+            &:checked::after {
+              -webkit-animation: click-wave 0.65s;
+              -moz-animation: click-wave 0.65s;
+              animation: click-wave 0.65s;
+              background: #111;
+              content: "";
+              display: block;
+              position: relative;
+              z-index: 10;
+              border-radius: 6px;
+            }
+            @keyframes click-wave {
+              0% {
+                height: 20px;
+                width: 20px;
+                opacity: 0.35;
+                position: relative;
+              }
+              100% {
+                height: 60px;
+                width: 60px;
+                margin-top: -20px;
+                margin-left: -20px;
+                opacity: 0;
+              }
+            }
+          }
+        }
+      }
+      .button_filter {
+        @include flex(center, center);
+        margin: 20px 0;
+        button {
+          height: 30px;
+          width: 150px;
+          border: none;
+          border-radius: 12px;
+          color: white;
+          background-color: #111;
+          font-size: 14px;
+          letter-spacing: 1px;
+        }
+        &.active {
+          display: none;
         }
       }
       .rated_category {
@@ -213,12 +301,25 @@
         }
       }
       .menuright_list {
+        position: relative;
         display: flex;
         flex-wrap: wrap;
-        margin-top: 30px;
+        margin-top: 15px;
         padding-bottom: 30px;
         border-bottom: 1px solid #ebebeb;
-
+        .loading {
+          @include flex(center, center);
+          text-align: center;
+          width: 100%;
+          height: 600px;
+          z-index: 99;
+          position: absolute;
+          top: 0;
+          left: 0;
+          h3 {
+            margin-left: 20px;
+          }
+        }
         .menuright_item {
           @include flex(center, center);
           flex-direction: column;
@@ -372,7 +473,7 @@
         @include flex(center, center);
         margin-top: 20px;
         li {
-           margin: 8px;
+          margin: 8px;
           .page_link {
             color: #fff;
             font-weight: 700;
@@ -382,34 +483,34 @@
             border-radius: 12px;
             @include flex(center, center);
             background-color: #ccc;
-            transition: all .5s ease-in;
-            &.active{
+            transition: all 0.5s ease-in;
+            &.active {
               background-color: #111;
             }
-            &:hover{
+            &:hover {
               background-color: #111;
               transform: scale(1.1);
             }
           }
-          i{
+          i {
             color: #fff;
-            font-weight: 700; 
+            font-weight: 700;
             font-size: 16px;
             width: 37px;
             height: 37px;
             border-radius: 12px;
             @include flex(center, center);
             background-color: #ccc;
-            transition: all .5s ease-in;
-            &:hover{
+            transition: all 0.5s ease-in;
+            &:hover {
               background-color: #111;
               transform: scale(1.1);
             }
           }
-          & > .fa-chevron-right{
+          & > .fa-chevron-right {
             background-color: #111;
           }
-          & > .fa-chevron-left{
+          & > .fa-chevron-left {
             background-color: #fff;
             border: 1px solid #111;
             color: #898888;

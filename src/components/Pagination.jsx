@@ -6,8 +6,6 @@ function Pagination({ postsPerPage, totalPosts, paginate,setCurrentPage,currentP
     for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
       pageNumbers.push(i);
     }
-    console.log(currentPage)
-    console.log(pageNumbers.length)
     const countupapni = ()=>{
       if(currentPage < pageNumbers.length){
           setCurrentPage(currentPage + 1);

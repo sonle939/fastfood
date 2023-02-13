@@ -11,12 +11,11 @@ import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-function Menu({ cart, handleAddToCart }) {
-  const initFilter = {
-    category: [],
-    manufacturer: [],
-    price: []
-  }
+import Loading from '../components/Loading';
+import manufacturer from '../data/Manufacturer';
+import category from '../data/Category';
+import price from '../data/Price';
+function Menu({ handleAddToCart }) {
   const notify = () => toast('👏🏿 The product was added to your cart! !', {
     position: "top-right",
     autoClose: 1500,
@@ -26,7 +25,7 @@ function Menu({ cart, handleAddToCart }) {
     draggable: true,
     progress: undefined,
     theme: "colored",
-    });
+  });
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostPerPage] = useState(6);
   const [tab, setTab] = useState(funituredata);
@@ -38,26 +37,56 @@ function Menu({ cart, handleAddToCart }) {
   const [control, setControl] = useState(currentPosts);
   const [actie, setActive] = useState(true);
   const [arrange, setArrange] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [hide, setHide] = useState(true);
+  const initFilter = {
+    manufacturer: [],
+    category: [],
+    price: []
+  };
   const [filter, setFilter] = useState(initFilter);
   const sortPrice = () => {
     if (arrange == true) {
       const sorrt = tab.sort((a, b) => {
         return a.price > b.price ? 1 : -1;
-      }).slice(indexOfFirstPost,indexOfLastPost);
+      }).slice(indexOfFirstPost, indexOfLastPost);
       setControl(sorrt);
     } else if (arrange == false) {
       const sorrt = tab.sort((a, b) => {
         return a.price < b.price ? 1 : -1;
-      }).slice(indexOfFirstPost,indexOfLastPost);
+      }).slice(indexOfFirstPost, indexOfLastPost);
       setControl(sorrt);
     }
   };
-  useEffect((col)=>{
-      sortPrice();
-  },[currentPage,postsPerPage])
+  useEffect(() => {
+    sortPrice();
+    setLoading(true);
+    setInterval(() => {
+      setLoading(false);
+    }, 4000);
+  }, [currentPage, postsPerPage, currentPage]);
+  const filterType = (typepro) => {
+    const filteraa = tab.filter(item => item.manufacturer == typepro).slice(indexOfFirstPost, indexOfLastPost);
+    setControl(filteraa);
+    console.log(filteraa);
+  }
+  const filterProduct = (typepro) => {
+    const filteraa = tab.filter(item => item.category == typepro).slice(indexOfFirstPost, indexOfLastPost);
+    setControl(filteraa);
+    console.log(filteraa);
+  }
+  const filterPrice = (typepro) => {
+    if (typepro < 2500) {
+      const filteraa = tab.filter(item => item.price < typepro).slice(indexOfFirstPost, indexOfLastPost);
+      setControl(filteraa);
+    } else if (typepro > 2500) {
+      const filteraa = tab.filter(item => item.price > typepro).slice(indexOfFirstPost, indexOfLastPost);
+      setControl(filteraa);
+    }
+  }
   const filterSelect = (type, checked, item) => {
     if (checked) {
-      switch (type) { 
+      switch (type) {
         case "manufacturer":
           setFilter({ ...filter, manufacturer: [...filter.manufacturer, item.manufacturer] })
           break
@@ -72,22 +101,22 @@ function Menu({ cart, handleAddToCart }) {
     } else {
       switch (type) {
         case "manufacturer":
-          const newmanufacturer = filter.manufacturer.filter(e => e !== item.manufacturer)
-          setFilter({ ...filter, manufacturer: newmanufacturer })
+          const newManufacturer = filter.manufacturer.filter(e => e !== item.manufacturer)
+          setFilter({ ...filter, manufacturer: newManufacturer })
           break
         case "category":
-          const newCategory = filter.color.filter(e => e !== item.color)
+          const newCategory = filter.category.filter(e => e !== item.category)
           setFilter({ ...filter, category: newCategory })
           break
         case "price":
           const newPrice = filter.price.filter(e => e !== item.price)
-          setFilter({ ...filter, size: newPrice })
+          setFilter({ ...filter, price: newPrice })
           break
         default:
       }
     }
   }
-  const clearFilter = () => setFilter(initFilter)
+  console.log(filter);
   return (
     <motion.div className="menu"
       inital={{ opacity: 0 }}
@@ -95,18 +124,18 @@ function Menu({ cart, handleAddToCart }) {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-    <ToastContainer
-    position="top-right"
-    autoClose={5000}
-    hideProgressBar={false}
-    newestOnTop={false}
-    closeOnClick
-    rtl={false}
-    pauseOnFocusLoss
-    draggable
-    pauseOnHover
-    theme="colored"
-    />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
       <HelmetProvider>
         <Helmet>
           <title>Menu</title>
@@ -123,62 +152,49 @@ function Menu({ cart, handleAddToCart }) {
               <div className="menu_wrapper">
                 <h3>Manufacturer</h3>
                 <ul>
-                  <li>
-                    Calvin Klein
-                    <p>({funituredata.filter(item => item.manufacturer == "Calvin Klein").length})</p>
-                  </li>
-                  <li >
-                    Diesel
-                    <p >({funituredata.filter(item => item.manufacturer == "Diesel").length})</p>
-                  </li>
-                  <li >
-                    Polo
-                    <p>({funituredata.filter(item => item.manufacturer == "Polo").length})</p>
-                  </li>
-                  <li >
-                    Tommy Hilfiger
-                    <p >({funituredata.filter(item => item.manufacturer == "Tommy Hifiger").length})</p>
-                  </li>
+                  {manufacturer.map(item => (
+                    <li className='checkbox' key={item.id}>
+                      <input type="checkbox" id={item.manufacturer}
+                        onChange={(input) => filterSelect("manufacturer", input.checked, item)}
+                        checked={filter.manufacturer.includes(item.manufacturer)}
+                      />
+                      <label for={item.manufacturer}>{item.manufacturer}</label>
+                    </li>
+                  ))}
+
                 </ul>
               </div>
               <div className="menu_wrapper">
                 <h3>Category</h3>
                 <ul>
-                  <li >
-                    Chair
-                    <p>({funituredata.filter(item => item.category == "chair").length})</p>
-                  </li>
-                  <li >
-                    Table
-                    <p>({funituredata.filter(item => item.category == "table").length})</p>
-                  </li>
-                  <li >
-                    Clamp
-                    <p>({funituredata.filter(item => item.category == "lamp").length})</p>
-                  </li>
-                  <li >
-                    Mirror
-                    <p>({funituredata.filter(item => item.category == "mirror").length})</p>
-                  </li>
-                  <li >
-                    Clock
-                    <p>({funituredata.filter(item => item.category == "clock").length})</p>
-                  </li>
+                  {category.map(item => (
+                    <li className='checkbox' key={item.id}>
+                      <input type="checkbox" id={item.category}
+                      onChange={(input) => filterSelect("category", input.checked, item)}
+                      checked={filter.category.includes(item.category)}
+                      />
+                      <label for={item.category}>{item.category}</label>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div className="menu_wrapper">
                 <h3>Price</h3>
                 <ul>
-                  <li >
-                    $0,00 - $2,000
-                    <p>({funituredata.filter(item => item.price < 2000).length})</p>
-                  </li>
-                  <li >
-                    $2000 And Above
-                    <p>({funituredata.filter(item => item.price > 2510).length})</p>
-                  </li>
+                  {price.map(item => (
+                    <li className='checkbox' key={item.id}>
+                      <input type="checkbox" id={item.price}
+                      onChange={(input) => filterSelect("price", input.checked, item)}
+                      checked={filter.price.includes(item.price)}
+                      />
+                      <label for={item.price}>{item.price}</label>
+                    </li>
+                  ))}
                 </ul>
               </div>
+            </div>
+            <div className={hide ? "button_filter active" : "button_filter"} onClick={() => { setControl(currentPosts); setHide(true) }}>
+              <button>Clear filter</button>
             </div>
             <div className="rated_category">
               <h3>Top rated</h3>
@@ -211,8 +227,8 @@ function Menu({ cart, handleAddToCart }) {
               </div>
               <div className="right_sort">
                 <div className="sort_page">
-                  <h3>Sort by: </h3>
-                  <select name="sortby" id="sortby" onChange={(e)=> setPostPerPage(e.target.value)}>
+                  <h3>Show: </h3>
+                  <select name="sortby" id="sortby" onChange={(e) => setPostPerPage(e.target.value)}>
                     <option value="0">6</option>
                     <option value="9">9</option>
                     <option value="12">12</option>
@@ -234,50 +250,52 @@ function Menu({ cart, handleAddToCart }) {
               </div>
             </div>
             <div className="menuright_list">
-              {control.map(item => (
-                <div className={actie ? "menuright_item" : "menuright_item active"} key={item.id}>
-                  <img src={item.image} />
-                  <div className="menuright_des">
-                    <img src={item.rating} className={actie ? "image active" : "image"} />
-                    <h3>{item.title}</h3>
-                    <p>${item.price}</p>
-                    <div className={actie ? "hide" : "hide active"}>
-                       <img src={item.rating} />
-                      <p>{item.customerreview.filter(item1 => item1.text).length} review</p>
-                    </div>
-                    <h5 className={actie ? "hide" : "hide active"}>{item.description}</h5>
-                    <div className={actie ? "hide" : "hide active"}>
-                      <button onClick={() => {handleAddToCart(item);notify()}}>
-                        <i className="fa fa-cart-plus" aria-hidden="true"></i> Add to cart
+              {loading == true ? (<Loading />) : (
+                <> {control.map(item => (
+                  <div className={actie ? "menuright_item" : "menuright_item active"} key={item.id}>
+                    <img src={item.image} />
+                    <div className="menuright_des">
+                      <img src={item.rating} className={actie ? "image active" : "image"} />
+                      <h3>{item.title}</h3>
+                      <p>${item.price}</p>
+                      <div className={actie ? "hide" : "hide active"}>
+                        <img src={item.rating} />
+                        <p>{item.customerreview.filter(item1 => item1.text).length} review</p>
+                      </div>
+                      <h5 className={actie ? "hide" : "hide active"}>{item.description}</h5>
+                      <div className={actie ? "hide" : "hide active"}>
+                        <button onClick={() => { handleAddToCart(item); notify() }}>
+                          <i className="fa fa-cart-plus" aria-hidden="true"></i> Add to cart
                         </button>
-                      <Link to={`/details/${item.id}`}><i className="fa fa-eye" aria-hidden="true"></i></Link>
+                        <Link to={`/details/${item.id}`}><i className="fa fa-eye" aria-hidden="true"></i></Link>
+                      </div>
+                    </div>
+                    <div className={actie ? "menuright_item_overlay active" : "menuright_item_overlay"}>
+                      <div className="overlay_control">
+                        <Link className="control_item">
+                          <i onClick={() => { handleAddToCart(item); notify() }}
+                            className="fa fa-cart-plus" aria-hidden="true"></i>
+                        </Link>
+                        <Link className="control_item">
+                          <i className="fa fa-heart-o" aria-hidden="true"></i>
+                        </Link>
+                        <Link className="control_item" to={`/details/${item.id}`}>
+                          <i className="fa fa-eye" aria-hidden="true"></i>
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                  <div className={actie ? "menuright_item_overlay active" : "menuright_item_overlay"}>
-                    <div className="overlay_control">
-                      <Link className="control_item">
-                        <i onClick={() => {handleAddToCart(item);notify()}}
-                          className="fa fa-cart-plus" aria-hidden="true"></i>
-                      </Link>
-                      <Link className="control_item">
-                        <i className="fa fa-heart-o" aria-hidden="true"></i>
-                      </Link>
-                      <Link className="control_item" to={`/details/${item.id}`}>
-                        <i className="fa fa-eye" aria-hidden="true"></i>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                ))}</>
+              )}
             </div>
-            <Pagination
+            {loading == true ? "" : (<Pagination
               postsPerPage={postsPerPage}
               totalPosts={tab.length}
               paginate={paginate}
-              setCurrentPage = {setCurrentPage}
-              currentPage = {currentPage}
-            />
-          </div> 
+              setCurrentPage={setCurrentPage}
+              currentPage={currentPage}
+            />)}
+          </div>
         </div>
         <Footer />
       </HelmetProvider>
