@@ -8,6 +8,7 @@ function Header({ cart }) {
     const [data, setData] = useState(funituredata);
     const [active, setActive] = useState(true);
     const [search, setSearch] = useState('');
+    const [hide,setHide] = useState(true);
     const suggest = [
         {
             id: 1,
@@ -42,22 +43,41 @@ function Header({ cart }) {
         <div className='header'>
             <div className={fix ? "header_top active" : "header_top"}>
                 <h3>welcome to leexs</h3>
-                <div className='header_img'>
                     <img src={logo} />
-                </div>
                 <div className='header_icon'>
-                    <p>Login</p>
+                    <i className="fa fa-user" aria-hidden="true"></i>
                     <div className='header_icon_list'>
                         <Link to="/cart" className='header_icon_icon'>
                             <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-                            {cart.length === 0 ? "(0)" : <p>({cart.length})</p>}
+                            {cart.length === 0 ? (<p>(0)</p>) : <p>({cart.length})</p>}
                         </Link>
                         <div className='header_icon_icon'>
-                            <i className="fa fa-heart-o" aria-hidden="true"></i> (0)
+                            <i className="fa fa-heart-o" aria-hidden="true"></i>
+                            <p>(0)</p>
                         </div>
                         <div className='header_icon_icon'>
                             <i className="fa fa-search" aria-hidden="true" onClick={() => setActive(!active)}></i>
                         </div>
+                    </div>
+                </div>
+                <div className='menu_drop'>
+                    <div className='dropdown_icon' onClick={()=>setHide(!hide)}>
+                       <p>utilities</p>
+                       <i className="fa fa-angle-down" aria-hidden="true"></i>
+                        <div className={hide ? "drop_list":"drop_list active"}>
+                        <Link to="/cart" className='header_icon_icon'>
+                            <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <p>Cart</p>
+                        </Link>
+                        <div className='header_icon_icon'>
+                            <i className="fa fa-heart-o" aria-hidden="true"></i>
+                            <p>favourite</p>
+                        </div>
+                        <div className='header_icon_icon'>
+                            <i className="fa fa-search" aria-hidden="true" onClick={() => setActive(!active)}></i>
+                            <p>Search</p>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -65,7 +85,7 @@ function Header({ cart }) {
                 <li><Link to="/" data-replace="Home"><span>Home</span></Link></li>
                 <li><Link to="/menu" data-replace="menu"><span>Menu</span></Link></li>
                 <li><Link to="/blogs" data-replace="Blogs"><span>Blogs</span></Link></li>
-                <li><Link to="/aboutus" data-replace="About us"><span>About us</span></Link></li>
+                <li><Link to="/aboutus" data-replace="About "><span>About</span></Link></li>
             </ul>
             <div className={active ? "overlay_search active" : "overlay_search"} >
                 <div className="input_wrapper">
@@ -83,7 +103,7 @@ function Header({ cart }) {
                             <>
                                 {search === "" ? "" :
                                     (<a href={`/details/${item.id}`} className='sear_content'>
-                                        <img src={item.image}/>
+                                        <img src={item.image} />
                                         <div className='sear_text'>
                                             <h3>{item.title}</h3>
                                             <p>$ {item.price}</p>

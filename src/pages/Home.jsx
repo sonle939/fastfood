@@ -191,13 +191,18 @@ function Home({ handleAddToCart }) {
         <div className='sell'>
           <div className='sell_category'>
             <div className='category_text'>
-              <h3>Shop by category</h3>
-              <div className='line'></div>
+              <div className='title_cate'>
+                <h3>Shop by category</h3>
+                <div className='line'></div>
+              </div>
               <div className='category_amount'>
                 <i className="fa fa-cube" aria-hidden="true"></i>
                 <p>100+ Unique products</p>
               </div>
               <Link>All category <i className="fa fa-angle-double-right" aria-hidden="true"></i></Link>
+              <div className='responsive_text'>
+
+              </div>
             </div>
             <div className='category_image'>
               {
@@ -228,12 +233,14 @@ function Home({ handleAddToCart }) {
               </div>
             </div>
           </div>
-          <div className='hot'>
-            <div className='hot_control'>
-              <div className="hot_title">
-                <h3>Our Products</h3>
-                <div className='line'></div>
-              </div>
+        </div>
+        <div className='hot'>
+          <div className='hot_control'>
+            <div className="hot_title">
+              <h3>Our Products</h3>
+              <div className='line'></div>
+            </div>
+            <div className='repo'>
               <div className='hot_control_item'>
                 <div onClick={() => { setTypeData(funituredata); setActive("all"); }} className={active === "all" ? "item_contol active" : "item_contol "}>All product</div>
                 <div onClick={() => { filterData("newmod"); setActive("newmod"); }} className={active === "newmod" ? "item_contol active" : "item_contol "}>Latest product</div>
@@ -243,56 +250,56 @@ function Home({ handleAddToCart }) {
               </div>
               <Link to="/menu">go to menu<i className="fa fa-arrow-right" aria-hidden="true"></i></Link>
             </div>
-            <div className='hot_wrapper'>
-              {typeData.map(item => (
-                <div className='wrapper-item' key={item.id}>
-                  <img src={item.image} alt="" className='img_hover' />
-                  {item.type === "discount" && <div className='type_item'>{item.type}</div>}
-                  {item.type === "selling" && <div className='type_item'>{item.type}</div>}
-                  {item.type === "newmod" && <div className='type_item'>{item.type}</div>}
-                  <div className='wrapper_control'>
-                    <div className='control_list'>
-                      <Link className='control_item'>
-                        <i className="fa fa-heart-o" aria-hidden="true"></i>
-                      </Link>
-                      <Link className='control_item' to={`/details/${item.id}`}>
-                        <i className="fa fa-eye" aria-hidden="true"></i>
-                      </Link>
-                      <Link className='control_item'>
-                        <i className="fa fa-cart-plus" aria-hidden="true" onClick={() => {handleAddToCart(item);notify()}}></i>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className='wrapper_description'>
-                    <img src={item.rating} alt="" />
-                    <h3>{item.title}</h3>
-                    {item.type === "discount" ? <div className='pricecalse'><p className='price_old'>${item.price}</p><p className='price_new'>${item.pricesale}</p></div> : <p>${item.price}</p>}
+          </div>
+          <div className='hot_wrapper'>
+            {typeData.map(item => (
+              <div className='wrapper-item' key={item.id}>
+                <img src={item.image} alt="" className='img_hover' />
+                {item.type === "discount" && <div className='type_item'>{item.type}</div>}
+                {item.type === "selling" && <div className='type_item'>{item.type}</div>}
+                {item.type === "newmod" && <div className='type_item'>{item.type}</div>}
+                <div className='wrapper_control'>
+                  <div className='control_list'>
+                    <Link className='control_item'>
+                      <i className="fa fa-heart-o" aria-hidden="true"></i>
+                    </Link>
+                    <Link className='control_item' to={`/details/${item.id}`}>
+                      <i className="fa fa-eye" aria-hidden="true"></i>
+                    </Link>
+                    <Link className='control_item'>
+                      <i className="fa fa-cart-plus" aria-hidden="true" onClick={() => { handleAddToCart(item); notify() }}></i>
+                    </Link>
                   </div>
                 </div>
-              ))}
-            </div>
+                <div className='wrapper_description'>
+                  <img src={item.rating} alt="" />
+                  <h3>{item.title}</h3>
+                  {item.type === "discount" ? <div className='pricecalse'><p className='price_old'>${item.price}</p><p className='price_new'>${item.pricesale}</p></div> : <p>${item.price}</p>}
+                </div>
+              </div>
+            ))}
           </div>
-          <div className='supplise'>
-            <div className='supplise_text'>
-              <h2>We design digital products</h2>
-              <i className="fa fa-cubes" aria-hidden="true"></i>
-              <p>
-                A house with beautiful interior design brings back aesthetic value
-                and value for money. When your home is beautifully furnished, it
-                will certainly appreciate more when you sell it. Besides,
-                everyone wants to live in a beautiful space,
-                because it will directly affect the owners psychology.
-              </p>
-            </div>
-            <div className='supplise_image'>
-              {
-                dataAbout.map(item => (
-                  <div className='supplise_item' key={item.id}>
-                    <img src={item.image} />
-                  </div>
-                ))
-              }
-            </div>
+        </div>
+        <div className='supplise'>
+          <div className='supplise_text'>
+            <h2>We design digital products</h2>
+            <i className="fa fa-cubes" aria-hidden="true"></i>
+            <p>
+              A house with beautiful interior design brings back aesthetic value
+              and value for money. When your home is beautifully furnished, it
+              will certainly appreciate more when you sell it. Besides,
+              everyone wants to live in a beautiful space,
+              because it will directly affect the owners psychology.
+            </p>
+          </div>
+          <div className='supplise_image'>
+            {
+              dataAbout.map(item => (
+                <div className='supplise_item' key={item.id}>
+                  <img src={item.image} />
+                </div>
+              ))
+            }
           </div>
         </div>
         <Footer />

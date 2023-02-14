@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import {container,item} from "../components/Animation";
 import { motion } from 'framer-motion';
 function Slider() {
-
+ 
     return (
         <div className='slider'>
             <Swiper

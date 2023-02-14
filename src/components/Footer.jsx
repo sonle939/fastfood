@@ -1,14 +1,16 @@
 import React from 'react'
 import logo from "../assets/logo3.png";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 function Footer() {
     return (
         <div className='footer'>
             <div className='footer_top'>
-                <img src={logo} alt="" />
-                <div className='top_input'>
-                    <input type="text" placeholder='Enter your email address..' />
-                    <i className="fa fa-paper-plane-o" aria-hidden="true"></i>
+                <div className='repo'>
+                    <img src={logo} alt="" />
+                    <div className='top_input'>
+                        <input type="text" placeholder='Enter your email address..' />
+                        <i className="fa fa-paper-plane-o" aria-hidden="true"></i>
+                    </div>
                 </div>
                 <div className='top_icon'>
                     <div className='top_icon-item'>
