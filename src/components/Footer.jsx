@@ -2,7 +2,7 @@ import React from 'react'
 import logo from "../assets/logo3.png";
 import { Link } from "react-router-dom";
 function Footer() {
-    return (
+    return ( 
         <div className='footer'>
             <div className='footer_top'>
                 <div className='repo'>

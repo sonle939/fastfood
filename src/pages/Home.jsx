@@ -108,7 +108,7 @@ function Home({ handleAddToCart }) {
         draggable
         pauseOnHover
         theme="colored"
-      />
+      /> 
       <HelmetProvider>
         <Helmet>
           <title>Home</title>

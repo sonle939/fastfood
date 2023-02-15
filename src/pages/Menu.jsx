@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { Link } from "react-router-dom";
 import video1 from "../assets/video/video2.mp4";
+import banner from "../assets/categoryimg.jpg";
 import Breadcrum from "../components/Breadcrum";
 import funituredata from "../data/funiture";
 import ScrollToTop from "react-scroll-to-top";
@@ -39,6 +40,9 @@ function Menu({ handleAddToCart }) {
   const [arrange, setArrange] = useState(true);
   const [loading, setLoading] = useState(false);
   const [hide, setHide] = useState(true);
+  const [dropdown,setDropDown] = useState(true);
+  const [dropdown1,setDropDown1] = useState(true);
+  const [dropdown2,setDropDown2] = useState(true);
   const initFilter = {
     manufacturer: [],
     category: [],
@@ -60,11 +64,13 @@ function Menu({ handleAddToCart }) {
   };
   useEffect(() => {
     sortPrice();
+  }, [currentPage, postsPerPage, currentPage]);
+  useEffect(() => {
     setLoading(true);
     setInterval(() => {
       setLoading(false);
     }, 4000);
-  }, [currentPage, postsPerPage, currentPage]);
+  }, [])
   const filterType = (typepro) => {
     const filteraa = tab.filter(item => item.manufacturer == typepro).slice(indexOfFirstPost, indexOfLastPost);
     setControl(filteraa);
@@ -150,8 +156,11 @@ function Menu({ handleAddToCart }) {
             </div>
             <div className="menu_list">
               <div className="menu_wrapper">
-                <h3>Manufacturer</h3>
-                <ul>
+                <div className='menu_openclose'>
+                  <h3>Manufacturer</h3>
+                  <i onClick={()=>setDropDown(!dropdown)} className="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <ul className={dropdown ? "ulist":"ulist active"}>
                   {manufacturer.map(item => (
                     <li className='checkbox' key={item.id}>
                       <input type="checkbox" id={item.manufacturer}
@@ -161,17 +170,19 @@ function Menu({ handleAddToCart }) {
                       <label for={item.manufacturer}>{item.manufacturer}</label>
                     </li>
                   ))}
-
                 </ul>
               </div>
               <div className="menu_wrapper">
-                <h3>Category</h3>
-                <ul>
+                <div className='menu_openclose'>
+                  <h3>Category</h3>
+                  <i onClick={()=>setDropDown1(!dropdown1)} className="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <ul className={dropdown1 ? "ulist1":"ulist1 active"}>
                   {category.map(item => (
                     <li className='checkbox' key={item.id}>
                       <input type="checkbox" id={item.category}
-                      onChange={(input) => filterSelect("category", input.checked, item)}
-                      checked={filter.category.includes(item.category)}
+                        onChange={(input) => filterSelect("category", input.checked, item)}
+                        checked={filter.category.includes(item.category)}
                       />
                       <label for={item.category}>{item.category}</label>
                     </li>
@@ -179,13 +190,16 @@ function Menu({ handleAddToCart }) {
                 </ul>
               </div>
               <div className="menu_wrapper">
-                <h3>Price</h3>
-                <ul>
+                <div className='menu_openclose'>
+                  <h3>Price</h3>
+                  <i onClick={()=>setDropDown2(!dropdown2)} className="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <ul className={dropdown2 ? "ulist2":"ulist2 active"}>
                   {price.map(item => (
                     <li className='checkbox' key={item.id}>
                       <input type="checkbox" id={item.price}
-                      onChange={(input) => filterSelect("price", input.checked, item)}
-                      checked={filter.price.includes(item.price)}
+                        onChange={(input) => filterSelect("price", input.checked, item)}
+                        checked={filter.price.includes(item.price)}
                       />
                       <label for={item.price}>{item.price}</label>
                     </li>
@@ -213,9 +227,7 @@ function Menu({ handleAddToCart }) {
             </div>
           </div>
           <div className="menu_right">
-            <video autoPlay loop muted>
-              <source src={video1} />
-            </video>
+            <img src={banner} className="banner_img" />
             <div className="menuright_control">
               <div className="right_icon">
                 <div className={actie ? "righticon_item" : "righticon_item active"} onClick={() => setActive(true)}>

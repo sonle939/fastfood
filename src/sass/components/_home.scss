@@ -20,6 +20,10 @@
         width: 750px;
         height: 400px;
       }
+      @include mobile{
+        width: 22rem;
+        height: 21.875rem;
+      }
       img {
         height: 100%;
         width: 100%;
@@ -87,6 +91,10 @@
           left: 38%;
           font-size: 32px;
         }
+        @include mobile{
+          left: 25%;
+            font-size: 1.5rem;
+        }
       }
       &:hover h3 {
         opacity: 1;
@@ -107,6 +115,10 @@
         text-align: center;
         margin-bottom: 20px;
       }
+      @include mobile{
+        font-size: 1.5rem;
+        width: 100%;
+      }
     }
     p {
       line-height: 1.4;
@@ -115,6 +127,10 @@
       @include tablet {
         text-align: center;
         margin-bottom: 30px;
+      }
+      @include mobile{
+        width: 21.8rem;
+        font-size: 1rem;
       }
     }
   }
@@ -131,6 +147,9 @@
     @include tablet {
       margin: 20px 0;
     }
+    @include mobile{
+        margin: 10px 0;
+    }
     .introduce_image {
       height: 300px;
       width: 450px;
@@ -140,6 +159,9 @@
       position: relative;
       @include tablet {
         width: 750px;
+      }
+      @include mobile{
+        width: 22rem;
       }
       img {
         width: 100%;
@@ -201,6 +223,11 @@
         font-weight: 800;
         transition: opacity 0.5s ease-in;
         opacity: 0;
+        @include mobile{
+          left: 18%;
+          width: 60%;
+          font-size: 0.938rem;
+        }
       }
       &:hover p {
         opacity: 1;
@@ -228,6 +255,9 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       font-weight: bold;
+      @include mobile{
+        font-size: 1.875rem;
+      }
     }
     i {
       transform: rotate(180deg);
@@ -238,11 +268,17 @@
   &_outstanding {
     @include flex(center, center);
     margin-top: 20px;
+    @include mobile{
+        flex-direction: column;
+    }
   }
   &_item {
     @include flex(center, center);
     flex-direction: column;
     margin: 0 20px;
+    @include mobile{
+      margin: 20px 0;   
+    }
   }
   &_icon {
     height: 60px;
@@ -279,6 +315,9 @@
       text-align: center;
       line-height: 1.4;
       margin-bottom: 20px;
+      @include mobile{
+        width: 80%; 
+      }
     }
     button {
       padding: 15px;
@@ -319,6 +358,9 @@
           font-size: 35px;
           letter-spacing: 1px;
           text-transform: uppercase;
+          @include mobile{
+              font-size: 1.8rem;
+          }
         }
         .line {
           height: 3px;
@@ -326,6 +368,9 @@
           background-color: #000;
           border-radius: 6px;
           margin-top: 20px;
+          @include mobile{
+            margin-top: 10px;
+          }
         }
       }
       .category_amount {
@@ -364,7 +409,10 @@
     }
     .category_image {
       @include flex(center, center);
-
+      @include mobile{
+        flex-direction: column; 
+        margin-top: 10px;
+      }
       .category_item {
         position: relative;
         @include flex(center, center);
@@ -378,6 +426,9 @@
           width: 210px;
           height: 250px;
           margin: 15px;
+        }
+        @include mobile{
+          width: 22rem;
         }
         img {
           width: 100%;
@@ -415,6 +466,9 @@
 .more {
   @include flex(center, center);
   margin-top: 15px;
+  @include mobile{
+    flex-direction: column;     
+  }
   &_item {
     position: relative;
     margin: 0 30px;
@@ -426,6 +480,10 @@
     transition: all 0.5s linear;
     @include tablet {
       width: 310px;
+    }
+    @include mobile{
+      width: 22rem;
+      margin: 15px 0;
     }
     img {
       width: 100%;
@@ -514,6 +572,9 @@
   margin-top: 70px;
   width: 100%;
   margin-bottom: 30px;
+  @include mobile{
+      margin-top: 40px;
+  }
   &_control {
     display: flex;
     justify-content: space-around;
@@ -532,6 +593,9 @@
         font-size: 35px;
         text-transform: uppercase;
         letter-spacing: 1px;
+        @include mobile{
+          font-size: 1.8rem;
+        }
       }
       .line {
         height: 3px;
@@ -549,6 +613,9 @@
       .hot_control_item {
         @include flex(center, center);
         padding: 15px;
+        @include mobile{
+          padding: 10px;
+        }
         .item_contol {
           font-size: 24px;
           letter-spacing: 1px;
@@ -562,6 +629,11 @@
           @include tablet{
             margin: 0 10px;
             font-size: 20px;
+          }
+          @include mobile{
+              font-size: 1.1rem;
+              text-align: center;
+
           }
         }
         .active {
@@ -578,6 +650,7 @@
         background-color: transparent;
         color: #000;
         transition: all 0.5s linear;
+        
         i {
           margin-left: 5px;
           transition: all 0.4s ease-in;
@@ -607,6 +680,9 @@
             background-color: #000;
           }
         }
+        @include mobile{
+          display: none;
+        }
       }
     }
   }
@@ -624,6 +700,9 @@
     @include tablet{
       margin-top: 20px;
       width: 100%;
+    }
+    @include mobile{
+      height: 400px;   
     }
     &::-webkit-scrollbar {
       width: 0px;
@@ -788,12 +867,21 @@
       letter-spacing: 1px;
       font-weight: bold;
       text-transform: uppercase;
+      @include mobile{
+          font-size: 1.7rem;
+          margin: 0 15px;
+          text-align: center;
+      }
     }
     i {
       transform: rotate(180deg);
       font-size: 28px;
       margin-top: 20px;
       margin-bottom: 10px;
+      @include mobile{
+       font-size: 1.563rem; 
+       margin-bottom: 0;
+      }
     }
     p {
       width: 50%;
@@ -803,10 +891,17 @@
       @include tablet{
         width: 80%;
       }
+      @include mobile{
+          width: 90%;
+          margin: 30px 0;
+      }
     }
   }
   &_image {
     @include flex(center, center);
+    @include mobile{
+      flex-wrap: wrap;   
+    }
     .supplise_item {
       height: 100px;
       width: 200px;

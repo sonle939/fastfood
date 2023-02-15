@@ -8,7 +8,7 @@ function Header({ cart }) {
     const [data, setData] = useState(funituredata);
     const [active, setActive] = useState(true);
     const [search, setSearch] = useState('');
-    const [hide,setHide] = useState(true);
+    const [hide, setHide] = useState(true);
     const suggest = [
         {
             id: 1,
@@ -43,7 +43,7 @@ function Header({ cart }) {
         <div className='header'>
             <div className={fix ? "header_top active" : "header_top"}>
                 <h3>welcome to leexs</h3>
-                    <img src={logo} />
+                <img src={logo} />
                 <div className='header_icon'>
                     <i className="fa fa-user" aria-hidden="true"></i>
                     <div className='header_icon_list'>
@@ -61,23 +61,23 @@ function Header({ cart }) {
                     </div>
                 </div>
                 <div className='menu_drop'>
-                    <div className='dropdown_icon' onClick={()=>setHide(!hide)}>
-                       <p>utilities</p>
-                       <i className="fa fa-angle-down" aria-hidden="true"></i>
-                        <div className={hide ? "drop_list":"drop_list active"}>
-                        <Link to="/cart" className='header_icon_icon'>
-                            <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <p>Cart</p>
-                        </Link>
-                        <div className='header_icon_icon'>
-                            <i className="fa fa-heart-o" aria-hidden="true"></i>
-                            <p>favourite</p>
+                    <div className='dropdown_icon' onClick={() => setHide(!hide)}>
+                        <p>utilities</p>
+                        <i className="fa fa-angle-down" aria-hidden="true"></i>
+                        <div className={hide ? "drop_list active" : "drop_list"}>
+                            <Link to="/cart" className='header_icon_icon'>
+                                <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <p>Cart</p>
+                            </Link>
+                            <div className='header_icon_icon'>
+                                <i className="fa fa-heart-o" aria-hidden="true"></i>
+                                <p>favourite</p>
+                            </div>
+                            <div className='header_icon_icon'>
+                                <i className="fa fa-search" aria-hidden="true" onClick={() => setActive(!active)}></i>
+                                <p>Search</p>
+                            </div>
                         </div>
-                        <div className='header_icon_icon'>
-                            <i className="fa fa-search" aria-hidden="true" onClick={() => setActive(!active)}></i>
-                            <p>Search</p>
-                        </div>
-                    </div>
                     </div>
                 </div>
             </div>

@@ -102,7 +102,7 @@
         background-color: #fff;
         border: 1px solid #e7e7e7;
         position: relative;
-        z-index: 100;
+        cursor: pointer;
         p {
           font-size: 18px;
           text-transform: capitalize;
@@ -113,7 +113,7 @@
         i {
           font-size: 20px;
         }
-      }
+      } 
       .drop_list {
         position: absolute;
         top: 48px;
@@ -124,17 +124,15 @@
         flex-direction: column;
         border-radius: 6px;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        z-index: 100;
-        transition: all 0.5s ease-in;
-        opacity: 0;
-        transform: translateY(40px);
+        transition: transform 0.5s ease-in;
+        opacity: 1;
+        transform: translateY(0);
+        z-index: 99;
         &.active {
           position: absolute;
-        top: 48px;
-        left: 0px;
-          transform: translateY(0);
-          opacity: 1;
-          transition: all 0.5s ease-in;
+          transform: translateY(40px);
+          opacity: 0;
+          transition: transform 0.5s ease-in;
           padding: 5px;
         }
         .header_icon_icon {
@@ -324,6 +322,7 @@
       background-color: transparent;
       border: 1px solid #fff;
       border-radius: 50%;
+      z-index: 99;
       i {
         font-size: 19px;
         color: #fff;
