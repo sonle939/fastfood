@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { Link } from "react-router-dom";
 import video1 from "../assets/video/video2.mp4";
-import banner from "../assets/categoryimg.jpg";
+import banner from "../assets/attachment.jpg";
 import Breadcrum from "../components/Breadcrum";
 import funituredata from "../data/funiture";
 import ScrollToTop from "react-scroll-to-top";
@@ -43,12 +43,6 @@ function Menu({ handleAddToCart }) {
   const [dropdown,setDropDown] = useState(true);
   const [dropdown1,setDropDown1] = useState(true);
   const [dropdown2,setDropDown2] = useState(true);
-  const initFilter = {
-    manufacturer: [],
-    category: [],
-    price: []
-  };
-  const [filter, setFilter] = useState(initFilter);
   const sortPrice = () => {
     if (arrange == true) {
       const sorrt = tab.sort((a, b) => {
@@ -90,39 +84,6 @@ function Menu({ handleAddToCart }) {
       setControl(filteraa);
     }
   }
-  const filterSelect = (type, checked, item) => {
-    if (checked) {
-      switch (type) {
-        case "manufacturer":
-          setFilter({ ...filter, manufacturer: [...filter.manufacturer, item.manufacturer] })
-          break
-        case "category":
-          setFilter({ ...filter, category: [...filter.category, item.category] })
-          break
-        case "price":
-          setFilter({ ...filter, price: [...filter.price, item.price] })
-          break
-        default:
-      }
-    } else {
-      switch (type) {
-        case "manufacturer":
-          const newManufacturer = filter.manufacturer.filter(e => e !== item.manufacturer)
-          setFilter({ ...filter, manufacturer: newManufacturer })
-          break
-        case "category":
-          const newCategory = filter.category.filter(e => e !== item.category)
-          setFilter({ ...filter, category: newCategory })
-          break
-        case "price":
-          const newPrice = filter.price.filter(e => e !== item.price)
-          setFilter({ ...filter, price: newPrice })
-          break
-        default:
-      }
-    }
-  }
-  console.log(filter);
   return (
     <motion.div className="menu"
       inital={{ opacity: 0 }}
@@ -164,10 +125,8 @@ function Menu({ handleAddToCart }) {
                   {manufacturer.map(item => (
                     <li className='checkbox' key={item.id}>
                       <input type="checkbox" id={item.manufacturer}
-                        onChange={(input) => filterSelect("manufacturer", input.checked, item)}
-                        checked={filter.manufacturer.includes(item.manufacturer)}
                       />
-                      <label for={item.manufacturer}>{item.manufacturer}</label>
+                      <label onClick={()=>filterType(item.manufacturer)} for={item.manufacturer}>{item.manufacturer}</label>
                     </li>
                   ))}
                 </ul>
@@ -181,10 +140,8 @@ function Menu({ handleAddToCart }) {
                   {category.map(item => (
                     <li className='checkbox' key={item.id}>
                       <input type="checkbox" id={item.category}
-                        onChange={(input) => filterSelect("category", input.checked, item)}
-                        checked={filter.category.includes(item.category)}
                       />
-                      <label for={item.category}>{item.category}</label>
+                      <label onClick={()=>filterType(item.category)} for={item.category}>{item.category}</label>
                     </li>
                   ))}
                 </ul>
@@ -198,10 +155,8 @@ function Menu({ handleAddToCart }) {
                   {price.map(item => (
                     <li className='checkbox' key={item.id}>
                       <input type="checkbox" id={item.price}
-                        onChange={(input) => filterSelect("price", input.checked, item)}
-                        checked={filter.price.includes(item.price)}
                       />
-                      <label for={item.price}>{item.price}</label>
+                      <label onClick={()=>filterType(item.price)} for={item.price}>{item.price}</label>
                     </li>
                   ))}
                 </ul>

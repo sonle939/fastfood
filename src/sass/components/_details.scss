@@ -8,6 +8,12 @@
     display: flex;
     align-items: center;
     margin-left: 270px;
+    @include tablet{
+      margin-left: 4rem;
+    }
+    @include mobile {
+      font-size: 1rem;
+    }
     a {
       text-transform: capitalize;
       font-size: 19px;
@@ -30,22 +36,46 @@
   &_wrapper {
     width: 100%;
     display: flex;
-
     padding: 10px;
     padding-left: 270px;
     margin-top: 70px;
+    @include tablet {
+      padding-left: 0;
+    }
+    @include mobile {
+      margin-top: 30px;
+    }
   }
   &_item {
     display: flex;
     align-items: center;
+    @include tablet {
+      flex-direction: column;
+      width: 100%;
+    }
+    @include mobile {
+      padding: 10px;
+    }
     img {
       height: 550px;
       width: 705px;
       object-fit: cover;
       border-radius: 6px;
+      @include tablet {
+        height: 400px;
+        width: 400px;
+      }
+      @include mobile {
+        width: 20rem;
+        height: 20rem;
+      }
     }
     .details_des {
       margin-left: 30px;
+      @include tablet {
+        text-align: center;
+        margin-top: 20px;
+      }
       h2 {
         font-size: 24px;
         line-height: 24px;
@@ -54,12 +84,19 @@
         color: #434343;
         font-weight: 700;
         text-transform: inherit;
+        @include mobile {
+          font-size: 1.375rem;
+        }
       }
       .details_rating {
         display: flex;
         align-items: center;
         justify-content: flex-start;
         margin-top: 30px;
+        @include tablet {
+          width: 100%;
+          justify-content: center;
+        }
         img {
           width: 90px;
           height: 20px;
@@ -77,6 +114,9 @@
         align-items: center;
         justify-content: flex-start;
         margin-top: 30px;
+        @include tablet {
+          justify-content: center;
+        }
         p {
           margin: 0 5px;
           color: #434343;
@@ -113,6 +153,9 @@
       display: flex;
       align-items: center;
       margin-top: 10px;
+      @include tablet {
+       justify-content: center;
+      }
       p {
         margin: 0 10px;
         font-size: 20px;
@@ -141,10 +184,19 @@
       width: 500px;
       line-height: 24px;
       padding: 10px;
+      @include mobile {
+        width: 23rem;
+      }
     }
     .details_btn {
       display: flex;
       align-items: center;
+      @include tablet {
+        justify-content: center;
+      }
+      @include mobile {
+        flex-direction: column;
+      }
       button {
         @include flex(center, center);
         background: #ebebeb;
@@ -153,12 +205,19 @@
         font-size: 18px;
         border-radius: 40px;
         margin: 20px 10px;
+        @include mobile {
+            margin: 10px 0;
+        }
         i {
           margin-right: 10px;
         }
         &:nth-child(2) {
           border-radius: 50%;
           width: 50px;
+          @include tablet {
+            width: 200px;
+            border-radius: 40px;
+          }
           i {
             margin-right: 0;
           }
@@ -172,6 +231,11 @@
     margin-left: 270px;
     margin-top: 50px;
     margin-bottom: 30px;
+    @include tablet {
+      margin-left: 0;
+      justify-content: center;
+      align-items: center;
+    }
     .tabs_control {
       display: flex;
       justify-content: flex-start;
@@ -183,6 +247,9 @@
         letter-spacing: 1px;
         margin: 0 20px;
         font-weight: bold;
+        @include mobile {
+          font-size: 1.188rem;
+        }
       }
       .active {
         border-bottom: 3px solid #484848;
@@ -196,6 +263,11 @@
         line-height: 24px;
         letter-spacing: 1px;
         font-style: italic;
+        @include tablet {
+          width: 100%;
+          text-align: center;
+          padding: 10px ;
+        }
       }
       .customer_list {
         display: flex;
@@ -229,6 +301,9 @@
               letter-spacing: 1px;
               font-style: italic;
               margin-top: -8px;
+              @include mobile {
+                  line-height: 20px;
+              }
             }
           }
         }
@@ -256,6 +331,9 @@
         width: 400px;
         border-radius: 12px;
         background-color: #e1e1e1;
+        @include mobile {
+          width: 300px;
+        }
         &_icon {
           position: absolute;
           top: 50%;
@@ -270,22 +348,33 @@
           i {
             color: #e1e1e1;
           }
+          @include mobile {
+            left: 43%;
+          }
         }
       }
     }
     &_bottom {
       @include flex(center, center);
       margin-top: 20px;
+      @include tablet {
+        width: 100%;
+        flex-wrap: wrap;
+      }
       .related_item {
         height: 350px;
         width: 300px;
         @include flex(center, center);
         flex-direction: column;
         border-radius: 6px;
-        padding: 10px;
+        padding: 10px; 
         cursor: pointer;
         transition: all 0.5s ease-in;
         position: relative;
+        @include tablet {
+          width: 200px;
+          margin: 0 30px;
+        }
         .related_image {
           width: 250px;
           height: 250px;

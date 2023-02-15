@@ -132,7 +132,7 @@ function Details({ handleAddToCart }) {
                   </Link>
                 </div>
               </div>
-            ))}
+            ))} 
 
           </div>
         </div>

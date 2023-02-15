@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 import cartempty from "../assets/cartempty.jpg";
 import { Link } from 'react-router-dom';
 function Cart({ cart, handleAddToCart, handleRemoveFromCart, }) {
-  console.log(cart);
+  console.log(cart); 
   const cartRef = useRef();
   const total = (arr) => {
     return arr.reduce((cal, item) => {

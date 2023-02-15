@@ -68,7 +68,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -104,7 +104,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -139,7 +139,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -175,7 +175,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -211,7 +211,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -246,7 +246,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -282,7 +282,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -318,7 +318,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -353,7 +353,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -389,7 +389,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -424,7 +424,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -459,7 +459,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -494,7 +494,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -531,7 +531,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -566,7 +566,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -602,7 +602,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -638,7 +638,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -673,7 +673,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -709,7 +709,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -744,7 +744,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -779,7 +779,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -814,7 +814,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -849,7 +849,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -883,7 +883,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -918,7 +918,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -953,7 +953,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -988,7 +988,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -1023,7 +1023,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -1057,7 +1057,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -1092,7 +1092,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -1129,7 +1129,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -1165,7 +1165,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -1201,7 +1201,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -1236,7 +1236,7 @@ const funituredata = [
             {
              id: 1,
              fullname: "Le Xuan Son",
-             imagecus: son_image,
+             imagecus: son1_image,
              text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
              review: rating5_image
             },
@@ -1273,7 +1273,7 @@ const funituredata = [
            {
             id: 1,
             fullname: "Le Xuan Son",
-            imagecus: son_image,
+            imagecus: son1_image,
             text: "I'm a pretty picky person when it comes to shopping, but this shop makes me happy when I buy, it's a great success of this shop.",
             review: rating5_image
            },

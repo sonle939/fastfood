@@ -7,8 +7,6 @@
   .breadcrumb {
     display: flex;
     padding-left: 270px;
-    @include mobile {
-    }
     @include tablet {
       padding-left: 9%;
     }
@@ -169,7 +167,7 @@
         .ulist1 {
           height: 350px;
           transition: all 0.5s ease-in;
-         display: block;
+          display: block;
           li {
             display: flex;
             justify-content: space-between;
@@ -436,6 +434,9 @@
         width: 100%;
         height: 300px;
         border-radius: 6px;
+        @include mobile {
+          height: 200px;
+        }
       }
       .menuright_control {
         display: flex;
@@ -445,8 +446,15 @@
         border-bottom: 1px solid #ebebeb;
         border-top: 1px solid #ebebeb;
         margin-top: 55px;
+        @include mobile {
+          flex-direction: column;
+        }
         .right_icon {
           @include flex(center, center);
+          @include mobile {
+            width: 100%;
+            margin-bottom: 10px;
+          }
           .righticon_item {
             height: 40px;
             width: 40px;
@@ -454,6 +462,9 @@
             @include flex(center, center);
             border-radius: 12px;
             border: 1px solid #434343;
+            @include mobile {
+              width: 50%;
+            }
             i {
               font-size: 17px;
               color: #434343;
@@ -470,6 +481,10 @@
           @include flex(center, center);
           .sort_page {
             margin-right: 10px;
+            @include mobile {
+              @include flex(start, center);
+              flex-direction: column; 
+            }
             h3 {
               font-style: italic;
               font-size: 17px;
@@ -478,6 +493,11 @@
               font-weight: 400;
               padding: 0 14px 0 0;
               text-transform: capitalize;
+              @include mobile {
+                font-size: 0.875rem;
+                margin-bottom: 5px;
+                margin-left: 8px;
+              }
             }
             select {
               font-style: italic;
@@ -487,6 +507,9 @@
               margin: 0 5px;
               height: 31px;
               min-width: 100px;
+              @include mobile {
+                min-width: 140px;
+              }
               cursor: pointer;
               color: #898888;
               font-size: 15px;
@@ -496,6 +519,10 @@
             }
           }
           .sort_title {
+            @include mobile {
+              @include flex(start, center);
+              flex-direction: column;
+            }
             h3 {
               font-style: italic;
               font-size: 17px;
@@ -504,6 +531,11 @@
               font-weight: 400;
               padding: 0 14px 0 0;
               text-transform: capitalize;
+              @include mobile {
+                font-size: 0.875rem;
+                margin-bottom: 5px;
+                margin-left: 8px;
+              }
             }
             select {
               font-style: italic;
@@ -564,6 +596,10 @@
             margin: 0.5rem;
             width: 30%;
           }
+          @include mobile {
+            width: 100%;
+            margin: .8rem 0;
+          }
           img {
             width: 255px;
             height: 255px;
@@ -573,6 +609,10 @@
             @include tablet {
               width: 11rem;
               height: 11rem;
+            }
+            @include mobile {
+              width: 100%;
+              height: 12.5rem;
             }
           }
           .menuright_des {
@@ -621,9 +661,16 @@
             align-items: flex-start;
             justify-content: flex-start;
             border-bottom: 1px solid #ebebeb;
+            @include mobile {
+              flex-direction: column;
+            }
             .menuright_des {
               margin-left: 30px;
               text-align: left;
+              @include mobile {
+               margin-left: 0;
+               margin-top: 10px;
+              }
               .hide {
                 display: none;
               }
@@ -723,9 +770,10 @@
       .pagination {
         @include flex(center, center);
         margin-top: 20px;
+        padding-left: 20px;
         li {
           margin: 8px;
-          .page_link {
+          .page_link { 
             color: #fff;
             font-weight: 700;
             font-size: 16px;
@@ -760,11 +808,17 @@
           }
           & > .fa-chevron-right {
             background-color: #111;
+            @include mobile {
+              display: none;
+            }
           }
           & > .fa-chevron-left {
             background-color: #fff;
             border: 1px solid #111;
             color: #898888;
+            @include mobile {
+              display: none;
+            }
           }
         }
       }
