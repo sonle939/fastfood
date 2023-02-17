@@ -5,7 +5,18 @@ import ScrollToTop from 'react-scroll-to-top';
 import Footer from '../components/Footer';
 import funituredata from "../data/funiture";
 import { motion } from 'framer-motion';
+import { toast } from 'react-toastify';
 function Details({ handleAddToCart }) {
+  const notify = () => toast('👏🏿 The product was added to your cart! !', {
+    position: "top-right",
+    autoClose: 1500,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+  });
   const { id } = useParams();
   const [tab, setTab] = useState(true);
   const [count, setCount] = useState(1);
@@ -51,7 +62,7 @@ function Details({ handleAddToCart }) {
                 <div className='details_rating'>
                   <img src={item1.rating} />
                   <p>{item1.customerreview.filter(item1 => item1.text).length} review</p>
-                </div>
+                </div> 
                 <div className='price_details'>
                   <p className={item1.type === "discount" ? "old" : "old active"}>$ {item1.price}</p>
                   {item1.type === "discount" ? <p>$ {item1.pricesale}</p> : ""}
@@ -66,12 +77,12 @@ function Details({ handleAddToCart }) {
                   {item1.description}
                 </div>
                 <div className='details_btn'>
-                  <button onClick={() => handleAddToCart(item1)}><i className="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+                  <button onClick={() => {handleAddToCart(item1); notify()}}><i className="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
                   <button><i className="fa fa-heart-o" aria-hidden="true"></i></button>
                 </div>
               </div>
             </div>
-          ))}
+          ))} 
         </div>
         <div className='details_tabs'>
           <div className='tabs_control'>

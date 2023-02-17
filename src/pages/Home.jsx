@@ -90,6 +90,9 @@ function Home({ handleAddToCart }) {
 
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, [])
   return (
     <motion.div className='home'
       inital={{ opacity: 0 }}
@@ -108,7 +111,7 @@ function Home({ handleAddToCart }) {
         draggable
         pauseOnHover
         theme="colored"
-      /> 
+      />
       <HelmetProvider>
         <Helmet>
           <title>Home</title>
@@ -133,7 +136,11 @@ function Home({ handleAddToCart }) {
             </div>
           </div>
           <div className='introduce_bottom'>
-            <div className='introduce_item'>
+            <div className='introduce_item'
+              data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               <div className='introduce_image'>
                 <img src="https://i.pinimg.com/564x/1d/80/a9/1d80a93b5d30ae65b891d971429f28d5.jpg" />
                 <p>Combination of many unique styles</p>
@@ -141,7 +148,9 @@ function Home({ handleAddToCart }) {
               </div>
               <p>Combination of many unique styles</p>
             </div>
-            <div className='introduce_item'>
+            <div className='introduce_item'
+              data-aos="fade-up"
+              data-aos-duration="3000">
               <div className='introduce_image'>
                 <img src="https://i.pinimg.com/564x/2e/0f/79/2e0f798bd11e40ed4699dc6839eb92f5.jpg" />
                 <p>Bringing innovation to each product</p>
@@ -149,7 +158,11 @@ function Home({ handleAddToCart }) {
               </div>
               <p>Bringing innovation to each product</p>
             </div>
-            <div className='introduce_item'>
+            <div className='introduce_item'
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               <div className='introduce_image'>
                 <img src="https://i.pinimg.com/564x/ca/32/ef/ca32efd88d1d0dd763fa6dfdeb472116.jpg" />
                 <p>Always ensure a high quality</p>
@@ -167,7 +180,10 @@ function Home({ handleAddToCart }) {
           <div className='about_outstanding'>
             {
               databout.map((item) => (
-                <div className='about_item' key={item.id}>
+                <div className='about_item'
+                  data-aos="fade-up"
+                  data-aos-duration="3000"
+                  key={item.id}>
                   <div className='about_icon'>
                     {item.icon}
                   </div>
@@ -190,7 +206,11 @@ function Home({ handleAddToCart }) {
         </div>
         <div className='sell'>
           <div className='sell_category'>
-            <div className='category_text'>
+            <div className='category_text'
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
               <div className='title_cate'>
                 <h3>Shop by category</h3>
                 <div className='line'></div>
@@ -207,7 +227,10 @@ function Home({ handleAddToCart }) {
             <div className='category_image'>
               {
                 dataCategory.map(item => (
-                  <div className='category_item' key={item.id}>
+                  <div className='category_item'
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                    key={item.id}>
                     <img src={item.image} />
                     <h3>{item.title}</h3>
                   </div>
@@ -216,7 +239,9 @@ function Home({ handleAddToCart }) {
             </div>
           </div>
           <div className='more'>
-            <div className='more_item'>
+            <div className='more_item' data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine">
               <img src='https://i.pinimg.com/564x/1c/7b/cc/1c7bcc3ebb02ab5ae82a81205636fe73.jpg' />
               <div className='more_item-text'>
                 <p>50% off all order</p>
@@ -224,7 +249,9 @@ function Home({ handleAddToCart }) {
                 <button>Shop now</button>
               </div>
             </div>
-            <div className='more_item'>
+            <div className='more_item' data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine">
               <img src='https://i.pinimg.com/736x/9d/27/b2/9d27b2f0d0fbf5aea36ca168487ff6a1.jpg' />
               <div className='more_item-text'>
                 <p>50% off all order</p>
@@ -240,8 +267,9 @@ function Home({ handleAddToCart }) {
               <h3>Our Products</h3>
               <div className='line'></div>
             </div>
-            <div className='repo'>
-              <div className='hot_control_item'>
+            <div className='repo' data-aos="fade-up"
+              data-aos-duration="3000">
+              <div className='hot_control_item' >
                 <div onClick={() => { setTypeData(funituredata); setActive("all"); }} className={active === "all" ? "item_contol active" : "item_contol "}>All product</div>
                 <div onClick={() => { filterData("newmod"); setActive("newmod"); }} className={active === "newmod" ? "item_contol active" : "item_contol "}>Latest product</div>
                 <div onClick={() => { filterData("selling"); setActive("selling"); }} className={active === "selling" ? "item_contol active" : "item_contol "}>Top rating</div>
@@ -284,7 +312,8 @@ function Home({ handleAddToCart }) {
           <div className='supplise_text'>
             <h2>We design digital products</h2>
             <i className="fa fa-cubes" aria-hidden="true"></i>
-            <p>
+            <p data-aos="fade-up"
+              data-aos-duration="3000">
               A house with beautiful interior design brings back aesthetic value
               and value for money. When your home is beautifully furnished, it
               will certainly appreciate more when you sell it. Besides,
@@ -295,7 +324,11 @@ function Home({ handleAddToCart }) {
           <div className='supplise_image'>
             {
               dataAbout.map(item => (
-                <div className='supplise_item' key={item.id}>
+                <div className='supplise_item'
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                  key={item.id}>
                   <img src={item.image} />
                 </div>
               ))

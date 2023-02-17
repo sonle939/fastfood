@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     margin-left: 270px;
-    @include tablet{
+    @include tablet {
       margin-left: 4rem;
     }
     @include mobile {
@@ -154,7 +154,7 @@
       align-items: center;
       margin-top: 10px;
       @include tablet {
-       justify-content: center;
+        justify-content: center;
       }
       p {
         margin: 0 10px;
@@ -205,8 +205,11 @@
         font-size: 18px;
         border-radius: 40px;
         margin: 20px 10px;
+        transition: all 0.5s linear;
+        z-index: 1;
+        position: relative;
         @include mobile {
-            margin: 10px 0;
+          margin: 10px 0;
         }
         i {
           margin-right: 10px;
@@ -221,6 +224,51 @@
           i {
             margin-right: 0;
           }
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: scale(0) rotate(0);
+            transition: all 0.5s linear;
+            background-color: transparent;
+            border-radius: 50%;
+            z-index: -1;
+          }
+          &:hover::before {
+            background-color: #111;
+            transform: scale(1) rotate(180deg);
+          }
+          &:hover i {
+            color: white;
+          }
+          &:hover {
+            color: white;
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          background-color: #ebebeb;
+          border-radius: 40px;
+          transition: width 0.5s linear;
+          z-index: -1;
+        }
+        &:hover::before {
+          width: 100%;
+          background-color: #111;
+        }
+        &:hover i {
+          color: white;
+        }
+        &:hover {
+          color: white;
         }
       }
     }
@@ -247,8 +295,13 @@
         letter-spacing: 1px;
         margin: 0 20px;
         font-weight: bold;
+        transition: all 0.5s linear;
+        cursor: pointer;
         @include mobile {
           font-size: 1.188rem;
+        }
+        &:hover {
+          border-bottom: 3px solid #484848;
         }
       }
       .active {
@@ -266,7 +319,7 @@
         @include tablet {
           width: 100%;
           text-align: center;
-          padding: 10px ;
+          padding: 10px;
         }
       }
       .customer_list {
@@ -302,7 +355,7 @@
               font-style: italic;
               margin-top: -8px;
               @include mobile {
-                  line-height: 20px;
+                line-height: 20px;
               }
             }
           }
@@ -367,7 +420,7 @@
         @include flex(center, center);
         flex-direction: column;
         border-radius: 6px;
-        padding: 10px; 
+        padding: 10px;
         cursor: pointer;
         transition: all 0.5s ease-in;
         position: relative;
@@ -379,8 +432,8 @@
           width: 250px;
           height: 250px;
           @include flex(center, center);
-           overflow: hidden;
-           border-radius: 6px;
+          overflow: hidden;
+          border-radius: 6px;
           .image {
             width: 100%;
             height: 100%;

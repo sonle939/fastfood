@@ -2,8 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { Link } from "react-router-dom";
-import video1 from "../assets/video/video2.mp4";
-import banner from "../assets/attachment.jpg";
+import banner from "../assets/categoryimg.jpg";
 import Breadcrum from "../components/Breadcrum";
 import funituredata from "../data/funiture";
 import ScrollToTop from "react-scroll-to-top";
@@ -30,7 +29,7 @@ function Menu({ handleAddToCart }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostPerPage] = useState(6);
   const [tab, setTab] = useState(funituredata);
-
+  const [selectedHobby, setSelectedHobby] = useState([]);
   const paginate = pageNumber => setCurrentPage(pageNumber);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -64,10 +63,12 @@ function Menu({ handleAddToCart }) {
     setInterval(() => {
       setLoading(false);
     }, 4000);
-  }, [])
+  }, []);
+
   const filterType = (typepro) => {
     const filteraa = tab.filter(item => item.manufacturer == typepro).slice(indexOfFirstPost, indexOfLastPost);
     setControl(filteraa);
+
     console.log(filteraa);
   }
   const filterProduct = (typepro) => {
@@ -84,6 +85,14 @@ function Menu({ handleAddToCart }) {
       setControl(filteraa);
     }
   }
+  const handleCheckbox = (name) => {
+    const findIndex = selectedHobby.findIndex((v) => v === name);
+    if (findIndex === -1) {
+      return setSelectedHobby((array) => [...array, name]);
+    }
+    return setSelectedHobby((array) => array.filter((v) => v !== name));
+  };
+  console.log(selectedHobby)
   return (
     <motion.div className="menu"
       inital={{ opacity: 0 }}
@@ -114,7 +123,7 @@ function Menu({ handleAddToCart }) {
             <div className="menuleft_title">
               <h3>Shop by</h3>
               <div className="line"></div>
-            </div>
+            </div>  
             <div className="menu_list">
               <div className="menu_wrapper">
                 <div className='menu_openclose'>
@@ -141,7 +150,7 @@ function Menu({ handleAddToCart }) {
                     <li className='checkbox' key={item.id}>
                       <input type="checkbox" id={item.category}
                       />
-                      <label onClick={()=>filterType(item.category)} for={item.category}>{item.category}</label>
+                      <label onChange={()=>handleCheckbox(item.category)} onClick={()=>filterProduct(item.category)} for={item.category}>{item.category}</label>
                     </li>
                   ))}
                 </ul>
@@ -156,7 +165,7 @@ function Menu({ handleAddToCart }) {
                     <li className='checkbox' key={item.id}>
                       <input type="checkbox" id={item.price}
                       />
-                      <label onClick={()=>filterType(item.price)} for={item.price}>{item.price}</label>
+                      <label onClick={()=>filterPrice(item.sosanh)} for={item.price}>{item.price}</label>
                     </li>
                   ))}
                 </ul>

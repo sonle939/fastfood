@@ -9,6 +9,7 @@ function Header({ cart }) {
     const [active, setActive] = useState(true);
     const [search, setSearch] = useState('');
     const [hide, setHide] = useState(true);
+    const [height,setHeoght] = useState(true);
     const suggest = [
         {
             id: 1,
@@ -97,7 +98,7 @@ function Header({ cart }) {
                     />
                     <i className="fa fa-search" aria-hidden="true"></i>
                 </div>
-                <div className="content_search">
+                <div className={search == ""?  "content_search active":"content_search"}>
                     {data.filter((item => item.title.toLowerCase().includes(search)))
                         .map(item => (
                             <>

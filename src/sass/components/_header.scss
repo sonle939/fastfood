@@ -86,7 +86,7 @@
       }
     }
     .menu_drop {
-      @include tablet {
+      @include tablet { 
         display: none;
       }
       @include laptop {
@@ -242,6 +242,12 @@
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid #ebebeb;
+      @include tablet{
+        width: 55%;
+      }
+      @include mobile{
+        width: 60%;
+      }
       i {
         font-size: 20px;
         color: #ebebeb;
@@ -256,10 +262,17 @@
         color: #ebebeb;
         font-style: italic;
         background-color: transparent;
+        @include tablet{
+          width: 100%;
+        }
+        @include mobile{
+          width: 100%;
+          font-size: .8rem;
+        }
       }
     }
     .content_search {
-      background-color: transparent;
+      background-color: #ebebeb;
       width: 40%;
       height: 210px;
       overflow: scroll;
@@ -270,10 +283,19 @@
       align-items: center;
       justify-content: flex-start;
       flex-wrap: wrap;
+      opacity: 1;
+      transition: height 0.5s ease-in;
+      border-radius: 6px;
+      @include tablet{
+        width: 55%;
+      }
       .sear_content {
         display: flex;
         align-items: center;
-        margin: 10px;
+        transition: all .5s linear;
+        border-radius: 6px;
+        padding: 10px;
+        margin: 10px 0;
         img {
           width: 45px;
           height: 45px;
@@ -282,7 +304,10 @@
         }
         .sear_text {
           margin-left: 15px;
-          color: #ebebeb;
+          color: #000;
+        }
+        &:hover{
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
         }
       }
       .active {
@@ -297,6 +322,11 @@
       }
       &::-webkit-scrollbar-track {
         background-color: transparent;
+      }
+      &.active{
+        height: 0;
+        opacity: 0;
+        transition: height 0.5s ease-in;
       }
     }
     &.active {
@@ -323,9 +353,31 @@
       border: 1px solid #fff;
       border-radius: 50%;
       z-index: 99;
+      transition: all .5s linear;
+      cursor: pointer;
       i {
         font-size: 19px;
         color: #fff;
+      }
+      &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        z-index: -1;
+        transition: all .5s linear;
+        border-radius: 50%;
+        transform: scale(0) rotate(0);
+      }
+      &:hover i{
+        color: #000;
+      }
+      &:hover::before{
+        background-color: #fff;
+        transform: scale(1) rotate(180deg);
       }
     }
   }
