@@ -29,7 +29,6 @@ function Menu({ handleAddToCart }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostPerPage] = useState(6);
   const [tab, setTab] = useState(funituredata);
-  const [selectedHobby, setSelectedHobby] = useState([]);
   const paginate = pageNumber => setCurrentPage(pageNumber);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -39,9 +38,17 @@ function Menu({ handleAddToCart }) {
   const [arrange, setArrange] = useState(true);
   const [loading, setLoading] = useState(false);
   const [hide, setHide] = useState(true);
-  const [dropdown,setDropDown] = useState(true);
-  const [dropdown1,setDropDown1] = useState(true);
-  const [dropdown2,setDropDown2] = useState(true);
+  const [dropdown, setDropDown] = useState(true);
+  const [dropdown1, setDropDown1] = useState(true);
+  const [dropdown2, setDropDown2] = useState(true);
+  const [selectedHobby, setSelectedHobby] = useState([]);
+  const handleCheckbox = (name) => {
+    const filtername = selectedHobby.findIndex((v) => v === name);
+    if (filtername === -1) {
+      setSelectedHobby((array) => [...array, name]);
+    }
+    setSelectedHobby((array) => array.filter((v) => v !== name));
+  };
   const sortPrice = () => {
     if (arrange == true) {
       const sorrt = tab.sort((a, b) => {
@@ -85,14 +92,6 @@ function Menu({ handleAddToCart }) {
       setControl(filteraa);
     }
   }
-  const handleCheckbox = (name) => {
-    const findIndex = selectedHobby.findIndex((v) => v === name);
-    if (findIndex === -1) {
-      return setSelectedHobby((array) => [...array, name]);
-    }
-    return setSelectedHobby((array) => array.filter((v) => v !== name));
-  };
-  console.log(selectedHobby)
   return (
     <motion.div className="menu"
       inital={{ opacity: 0 }}
@@ -123,19 +122,26 @@ function Menu({ handleAddToCart }) {
             <div className="menuleft_title">
               <h3>Shop by</h3>
               <div className="line"></div>
-            </div>  
+            </div>
             <div className="menu_list">
               <div className="menu_wrapper">
                 <div className='menu_openclose'>
                   <h3>Manufacturer</h3>
-                  <i onClick={()=>setDropDown(!dropdown)} className="fa fa-angle-down" aria-hidden="true"></i>
+                  <i onClick={() => setDropDown(!dropdown)}
+                    className="fa fa-angle-down" aria-hidden="true"></i>
                 </div>
-                <ul className={dropdown ? "ulist":"ulist active"}>
+                <ul className={dropdown ? "ulist" : "ulist active"}>
                   {manufacturer.map(item => (
-                    <li className='checkbox' key={item.id}>
+                    <li className={dropdown ? "li" : "li active"} key={item.id}>
                       <input type="checkbox" id={item.manufacturer}
                       />
-                      <label onClick={()=>filterType(item.manufacturer)} for={item.manufacturer}>{item.manufacturer}</label>
+                      <label onClick={() => {
+                        filterType(item.manufacturer);
+                      }}
+                        for={item.manufacturer}
+                      >
+                        {item.manufacturer}
+                      </label>
                     </li>
                   ))}
                 </ul>
@@ -143,14 +149,17 @@ function Menu({ handleAddToCart }) {
               <div className="menu_wrapper">
                 <div className='menu_openclose'>
                   <h3>Category</h3>
-                  <i onClick={()=>setDropDown1(!dropdown1)} className="fa fa-angle-down" aria-hidden="true"></i>
+                  <i onClick={() => setDropDown1(!dropdown1)}
+                    className="fa fa-angle-down" aria-hidden="true"></i>
                 </div>
-                <ul className={dropdown1 ? "ulist1":"ulist1 active"}>
+                <ul className={dropdown1 ? "ulist1" : "ulist1 active"}>
                   {category.map(item => (
-                    <li className='checkbox' key={item.id}>
+                    <li className={dropdown1 ? "li" : "li active"} key={item.id}>
                       <input type="checkbox" id={item.category}
                       />
-                      <label onChange={()=>handleCheckbox(item.category)} onClick={()=>filterProduct(item.category)} for={item.category}>{item.category}</label>
+                      <label onChange={() => handleCheckbox(item.category)}
+                        onClick={() => filterProduct(item.category)}
+                        for={item.category}>{item.category}</label>
                     </li>
                   ))}
                 </ul>
@@ -158,14 +167,16 @@ function Menu({ handleAddToCart }) {
               <div className="menu_wrapper">
                 <div className='menu_openclose'>
                   <h3>Price</h3>
-                  <i onClick={()=>setDropDown2(!dropdown2)} className="fa fa-angle-down" aria-hidden="true"></i>
+                  <i onClick={() => setDropDown2(!dropdown2)}
+                    className="fa fa-angle-down" aria-hidden="true"></i>
                 </div>
-                <ul className={dropdown2 ? "ulist2":"ulist2 active"}>
+                <ul className={dropdown2 ? "ulist2" : "ulist2 active"}>
                   {price.map(item => (
-                    <li className='checkbox' key={item.id}>
+                    <li className={dropdown2 ? "li" : "li active"} key={item.id}>
                       <input type="checkbox" id={item.price}
                       />
-                      <label onClick={()=>filterPrice(item.sosanh)} for={item.price}>{item.price}</label>
+                      <label onClick={() => filterPrice(item.sosanh)}
+                        for={item.price}>{item.price}</label>
                     </li>
                   ))}
                 </ul>

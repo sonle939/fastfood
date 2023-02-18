@@ -74,11 +74,8 @@
         }
         .ulist {
           height: 270px;
-          transition: all 0.5s ease-in;
+          transition: height 0.5s ease-in;
           display: block;
-          .deactive {
-            opacity: 0.35;
-          }
           li {
             display: flex;
             justify-content: space-between;
@@ -88,8 +85,14 @@
             margin: 15px 0;
             font-weight: 400;
             font-style: italic;
-            color: #a2a2a2;
+            color: #434343;
             transition: all .5s linear;
+            &.active{
+              display: none;
+            }
+            &.deactive {
+              opacity: 0.35;
+            }
             label {
               display: block;
               line-height: 40px;
@@ -169,14 +172,13 @@
             }
           }
           &.active {
+            transition: height 0.5s ease-in;
             height: 0;
-            display: none;
           }
         }
         .ulist1 {
           height: 350px;
           transition: all 0.5s ease-in;
-          display: block;
           li {
             display: flex;
             justify-content: space-between;
@@ -186,7 +188,11 @@
             margin: 15px 0;
             font-weight: 400;
             font-style: italic;
-            color: #a2a2a2;
+            color: #434343;
+            transition: all .5s ease-in;
+            &.active{
+              display: none;
+            }
             label {
               display: block;
               line-height: 40px;
@@ -266,14 +272,13 @@
             }
           }
           &.active {
+            transition: height 0.5s ease-in;
             height: 0;
-            display: none;
           }
         }
         .ulist2 {
           height: 170px;
           transition: all 0.5s ease-in;
-          display: block;
           li {
             display: flex;
             justify-content: space-between;
@@ -283,7 +288,11 @@
             margin: 15px 0;
             font-weight: 400;
             font-style: italic;
-            color: #a2a2a2;
+            color: #434343;
+            transition: all .5s ease;
+            &.active{
+              display: none;
+            }
             label {
               display: block;
               line-height: 40px;
@@ -363,8 +372,8 @@
             }
           }
           &.active {
+            transition: height 0.5s ease-in;
             height: 0;
-            display: none;
           }
         }
       }

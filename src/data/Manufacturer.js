@@ -13,7 +13,7 @@ const manufacturer = [
     },
     {
         id: 4,
-        manufacturer: "Tommy Hilfiger"
+        manufacturer: "Tommy Hifiger"
     }
 ]
 export default manufacturer;

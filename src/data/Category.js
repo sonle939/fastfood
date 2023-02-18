@@ -5,7 +5,7 @@ const category = [
     },
     {
         id: 2,
-        category: "mirorr"
+        category: "mirror"
     },
     {
         id: 3,
