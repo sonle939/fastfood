@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "/fastfood/static/css/main.0346eff0.css",
-    "main.js": "/fastfood/static/js/main.74343fd5.js",
+    "main.css": "/fastfood/static/css/main.444f8955.css",
+    "main.js": "/fastfood/static/js/main.4ebd8844.js",
     "static/media/video5.mp4": "/fastfood/static/media/video5.11a4ac8cf47b7a9b721f.mp4",
     "static/media/video6.mp4": "/fastfood/static/media/video6.5239aec9824cc5f6cc66.mp4",
     "static/media/video1.mp4": "/fastfood/static/media/video1.7f973fd5dca68c20b41d.mp4",
     "static/media/video2.mp4": "/fastfood/static/media/video2.ab81fd0322c29d9b2bfa.mp4",
     "static/media/video3.mp4": "/fastfood/static/media/video3.4d621ffd36a60a86f6b2.mp4",
     "static/media/video4.mp4": "/fastfood/static/media/video4.592f36635a5261f03619.mp4",
-    "static/media/attachment.jpg": "/fastfood/static/media/attachment.64e804699ab9892a5590.jpg",
     "static/media/son1.jpg": "/fastfood/static/media/son1.2f61a773cdfe0ae12c44.jpg",
     "static/media/son2.jpg": "/fastfood/static/media/son2.b6e89314ce5938070c22.jpg",
     "static/media/son.jpg": "/fastfood/static/media/son.de90e5f51ce9d48180f3.jpg",
@@ -37,6 +36,7 @@
     "static/media/lamp.jpg": "/fastfood/static/media/lamp.3e4e9e36b2833dd75008.jpg",
     "static/media/chair2.jpg": "/fastfood/static/media/chair2.268a92e192aeabda8906.jpg",
     "static/media/clock6.jpg": "/fastfood/static/media/clock6.b2ba04ebf31e5e6931c6.jpg",
+    "static/media/categoryimg.jpg": "/fastfood/static/media/categoryimg.30a927fbdc2d66ed306c.jpg",
     "static/media/logo3.png": "/fastfood/static/media/logo3.4aa09194a7808fb9d80a.png",
     "static/media/chair1.jpg": "/fastfood/static/media/chair1.cd8673720fee8eda7bc2.jpg",
     "static/media/clock5.jpg": "/fastfood/static/media/clock5.e669bef4a2b38a8b8028.jpg",
@@ -51,11 +51,11 @@
     "static/media/lamp1.jpg": "/fastfood/static/media/lamp1.b051627d910cb91c2ce9.jpg",
     "static/media/rating4.png": "/fastfood/static/media/rating4.b64a34e3f2160c6a69fc.png",
     "index.html": "/fastfood/index.html",
-    "main.0346eff0.css.map": "/fastfood/static/css/main.0346eff0.css.map",
-    "main.74343fd5.js.map": "/fastfood/static/js/main.74343fd5.js.map"
+    "main.444f8955.css.map": "/fastfood/static/css/main.444f8955.css.map",
+    "main.4ebd8844.js.map": "/fastfood/static/js/main.4ebd8844.js.map"
   },
   "entrypoints": [
-    "static/css/main.0346eff0.css",
-    "static/js/main.74343fd5.js"
+    "static/css/main.444f8955.css",
+    "static/js/main.4ebd8844.js"
   ]
 }
